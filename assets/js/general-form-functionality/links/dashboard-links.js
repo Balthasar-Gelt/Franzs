@@ -1,0 +1,1 @@
+export let dashboardLinks = document.querySelectorAll('.dashboard_link');

@@ -1,0 +1,1 @@
+export let registerFormWrapper = document.querySelector("#register_form_wrapper");

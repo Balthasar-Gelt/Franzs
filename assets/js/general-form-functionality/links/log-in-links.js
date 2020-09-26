@@ -1,0 +1,1 @@
+export let logInLinks = document.querySelectorAll(".log_in_link");

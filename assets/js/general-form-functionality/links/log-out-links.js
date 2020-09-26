@@ -1,0 +1,1 @@
+export let logOutlinks = document.querySelectorAll('.log_out_link');
