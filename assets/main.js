@@ -1,3 +1,4 @@
+import './scss/main.scss';
 import './js/shop/shop';
 import './js/dashboard/dashboard';
 import './js/product-page/product-page';

@@ -11,20 +11,18 @@ require_once 'nav-menu.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href=" <?php echo 'http://'. $_SERVER['SERVER_NAME'] .':'. $_SERVER['SERVER_PORT'] .'/Dealers/';?>assets/main.css">
+    <link rel="stylesheet" href=" <?php echo 'http://'. $_SERVER['SERVER_NAME'] .':'. $_SERVER['SERVER_PORT'] .'/Dealers/';?>/dist/main.css">
     <title>Eshop with antiquities</title>
 </head>
 
 <body>
-    <div class="dark_background">
-        <nav class="display_flex container">
-            <h1><a href="index.php">Franzs</a></h1>
+    <nav class="display_flex container">
+        <h1><a href="index.php">Franzs</a></h1>
 
-            <?php printNavMenu(); ?>
+        <?php printNavMenu(); ?>
 
-            <img class="menu_icon" src="<?php echo 'http://'. $_SERVER['SERVER_NAME'] .':'. $_SERVER['SERVER_PORT'] .'/Dealers/' . '/assets/other/menu.svg'; ?>" alt="Hey, Vsauce, image here">
-        </nav>
-    </div>
+        <img class="menu_icon" src="<?php echo 'http://'. $_SERVER['SERVER_NAME'] .':'. $_SERVER['SERVER_PORT'] .'/Dealers/' . '/assets/other/menu.svg'; ?>" alt="Hey, Vsauce, image here">
+    </nav>
 
 <?php
 include_once 'responsive-menu.php';

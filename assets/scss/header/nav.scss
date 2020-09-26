@@ -1,0 +1,25 @@
+@import '../generals/variables.scss';
+@import '../generals/mixins.scss';
+
+nav{
+    background-color: $lighterPrimary;
+    @include flex();
+
+    ul{
+        display: none;
+    }
+
+    h1 a{
+        color: black;
+        letter-spacing: .05em;
+    }
+
+    img{
+        cursor: pointer;
+    }
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+

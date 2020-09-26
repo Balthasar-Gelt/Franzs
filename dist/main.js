@@ -1849,18 +1849,32 @@ if(window.location.pathname == '/Dealers/shop.php'){
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _js_shop_shop__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/shop/shop */ "./assets/js/shop/shop.js");
-/* harmony import */ var _js_dashboard_dashboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/dashboard/dashboard */ "./assets/js/dashboard/dashboard.js");
-/* harmony import */ var _js_product_page_product_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/product-page/product-page */ "./assets/js/product-page/product-page.js");
-/* harmony import */ var _js_cart_cart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/cart/cart */ "./assets/js/cart/cart.js");
-/* harmony import */ var _js_checkout_checkout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/checkout/checkout */ "./assets/js/checkout/checkout.js");
-/* harmony import */ var _js_header_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/header/header */ "./assets/js/header/header.js");
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/main.scss */ "./assets/scss/main.scss");
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_shop_shop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/shop/shop */ "./assets/js/shop/shop.js");
+/* harmony import */ var _js_dashboard_dashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/dashboard/dashboard */ "./assets/js/dashboard/dashboard.js");
+/* harmony import */ var _js_product_page_product_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/product-page/product-page */ "./assets/js/product-page/product-page.js");
+/* harmony import */ var _js_cart_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/cart/cart */ "./assets/js/cart/cart.js");
+/* harmony import */ var _js_checkout_checkout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/checkout/checkout */ "./assets/js/checkout/checkout.js");
+/* harmony import */ var _js_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/header/header */ "./assets/js/header/header.js");
 
 
 
 
 
 
+
+
+/***/ }),
+
+/***/ "./assets/scss/main.scss":
+/*!*******************************!*\
+  !*** ./assets/scss/main.scss ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 

@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Rubik, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+nav {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+nav ul {
+  display: none;
+}
+nav h1 a {
+  color: black;
+  letter-spacing: 0.05em;
+}
+nav img {
+  cursor: pointer;
+}
+
+#search_bar {
+  display: none;
+}
+
+.message_container {
+  display: none;
+}
+
+.overlay {
+  display: none;
+}
+
+.menu_overlay {
+  display: none;
+}
+
+#log_in_form_wrapper {
+  display: none;
+}
+
+#register_form_wrapper {
+  display: none;
+}
+
+header {
+  text-align: center;
+  margin: 3em 0;
+}
+header img {
+  display: none;
+}
+header h1 {
+  font-size: 2.5em;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+}
+header h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+header h3 {
+  font-size: 1.3em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+header a {
+  font-size: 0.8em;
+  display: inline-block;
+  padding: 1.35em 2.75em;
+  background-color: #207dff;
+  color: white;
+  margin-top: 1em;
+}
+
+/*# sourceMappingURL=main.css.map*/
