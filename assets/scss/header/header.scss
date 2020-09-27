@@ -1,13 +1,10 @@
 @import 'nav';
 @import 'search-bar';
 @import 'messages';
+@import 'responsive-menu';
 @import '../generals/variables.scss';
 
 .overlay{
-    display: none;
-}
-
-.menu_overlay{
     display: none;
 }
 

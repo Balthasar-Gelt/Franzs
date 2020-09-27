@@ -60,11 +60,35 @@ nav img {
   display: none;
 }
 
-.overlay {
+.menu_overlay {
   display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  padding-top: 3em;
+}
+.menu_overlay .overlay_img_wrapper {
+  padding-right: 2em;
+  text-align: right;
+}
+.menu_overlay .overlay_img_wrapper img {
+  transform: scale(1.5);
+}
+.menu_overlay a {
+  font-weight: 300;
+  color: white;
+}
+.menu_overlay ul {
+  text-align: center;
+  line-height: 2em;
+  font-size: 1.75em;
 }
 
-.menu_overlay {
+.overlay {
   display: none;
 }
 
@@ -212,7 +236,7 @@ footer .footer_links li:last-child {
 }
 
 #aside_button {
-  z-index: 9;
+  z-index: 8;
   position: fixed;
   bottom: 10%;
   right: 10%;

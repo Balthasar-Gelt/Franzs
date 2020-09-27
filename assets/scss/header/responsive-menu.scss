@@ -1,0 +1,34 @@
+.menu_overlay{
+
+    .overlay_img_wrapper{
+
+        img{
+            transform: scale(1.5);
+        }
+
+        padding-right: 2em;
+        text-align: right;
+    }
+
+    a{
+        font-weight: 300;
+        color: white;
+    }
+
+    ul{
+        text-align: center;
+        line-height: 2em;
+        font-size: 1.75em;
+    }
+
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.700);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    padding-top: 3em;
+}
+
