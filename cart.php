@@ -73,12 +73,11 @@ $cartItems = getProducts($db, $cart->getCartItems(), ['Status', 'filename', 'Nam
         <a id="checkout_link"
              <?php
                 if($canCheckOut){
-                    echo 'class="product_button"';
                     echo 'href="checkout.php"';
                 }
                 
                 else{
-                    echo 'class="cart_button_margin product_button disabled_button"';
+                    echo 'class="disabled_button"';
                     echo 'disabled ';
                     echo 'href="#"';
                 }

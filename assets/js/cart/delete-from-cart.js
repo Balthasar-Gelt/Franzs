@@ -37,11 +37,14 @@ function deleteFromCart(event){
                 if(response['answer']['isEmpty'])
                     makeCartEmpty();
 
-                let itemStatusArray = response['answer']['itemStatus'];
-                let disableCartButton = (itemStatusArray.includes('Reserved') || itemStatusArray.includes('Sold Out'));
-                let cartButtonStatus = checkIfButtonDisabled(cartCheckoutButton);
+                else{
 
-                checkOnCartButton(disableCartButton, cartButtonStatus);
+                    let itemStatusArray = response['answer']['itemStatus'];
+                    let disableCartButton = (itemStatusArray.includes('Reserved') || itemStatusArray.includes('Sold Out'));
+                    let cartButtonStatus = checkIfButtonDisabled(cartCheckoutButton);
+    
+                    checkOnCartButton(disableCartButton, cartButtonStatus);
+                }
             }
         })
     }
