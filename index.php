@@ -51,12 +51,12 @@ $indexPage = new IndexPage(new DB($dbConfig));
 
         <section class="display_flex one_product_row container">
 
-            <img src= <?php echo addImage($indexPage->getProperty('bottomRowImageName')); ?> alt="clock">
-
             <aside class="center_text">
                 <h1> <?php echo $indexPage->getProperty('bottomRowTitle'); ?> </h1>
                 <a class="secondary_button" href="shop.php">SHOP NOW</a>
             </aside>
+
+            <img src= <?php echo addImage($indexPage->getProperty('bottomRowImageName')); ?> alt="clock">
 
         </section>
 
