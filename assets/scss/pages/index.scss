@@ -49,14 +49,20 @@
             color: $secondaryTextColor;
         }
 
-        margin-top: 1em;
+        width: 100%;
+        position: absolute;
+        bottom: 4%;
+        left: 50%;
+        transform: translateX(-50%);
         line-height: 1.75em;
     }
 
+    position: relative;
     border-left: 1px solid $primaryColor;
     border-top: 1px solid $primaryColor;
     text-align: center;
     width: 50%;
+    padding-bottom: 7.5em;
 }
 
 .one_product_row {

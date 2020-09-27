@@ -114,10 +114,12 @@ header a {
 }
 
 .item {
+  position: relative;
   border-left: 1px solid #e6e6e6;
   border-top: 1px solid #e6e6e6;
   text-align: center;
   width: 50%;
+  padding-bottom: 7.5em;
 }
 .item:nth-child(odd) {
   border-left: none;
@@ -139,7 +141,11 @@ header a {
   font-size: 1em;
 }
 .item .item_text {
-  margin-top: 1em;
+  width: 100%;
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
   line-height: 1.75em;
 }
 .item .item_text h1 {
@@ -171,7 +177,7 @@ header a {
 footer {
   line-height: 1.75em;
   background-color: whitesmoke;
-  margin-top: 4em;
+  margin-top: 3em;
   padding-top: 4em;
   padding-bottom: 7em;
 }
@@ -180,9 +186,6 @@ footer li {
 }
 footer li:last-child {
   margin-bottom: 0;
-}
-footer span {
-  color: #4d4d4d;
 }
 footer h1 {
   font-size: 1.75em;
@@ -194,6 +197,26 @@ footer .footer_links li {
 }
 footer .footer_links li:last-child {
   margin-bottom: 0;
+}
+
+.side_content {
+  display: none;
+}
+
+#aside_overlay {
+  display: none;
+}
+
+#aside_button {
+  z-index: 9;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  transform: scale(1.5);
+  padding: 0.2em;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: white;
 }
 
 /*# sourceMappingURL=main.css.map*/
