@@ -19,14 +19,18 @@ include 'partials/header.php';
                 <img src=<?php echo addImage($product->filename); ?> alt="product Img">
             </aside>
 
-            <aside>
+            <aside class="product_page_text_wrapper">
                 <h1 class="heading_medium"><?php echo $product->Name; ?></h1>
                 
                 <P class="text"><?php echo $product->Description; ?></P>
                 
                 <span class="price"><?php echo $product->Price; ?> $</span>
 
-                <div class="price">Availability: <span><?php echo $product->Status; ?></span></div>
+                <div class="availability">
+                    Availability: <?php echo '<span class="' .str_replace(' ', '', $product->Status) . '">';
+                        echo $product->Status;
+                        echo '</span>';?>
+                </div>
                 <?php
                     if($product->Status == "In Stock")
                         echo "<a class='product_button add_product' href='page-funcs/helper-funcs/cart-action.php?id=".$_GET['id']."&type=addToCart'>ADD TO CART</a>";

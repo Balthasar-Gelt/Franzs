@@ -1,0 +1,51 @@
+@import '../generals/variables.scss';
+
+.image_wrapper{
+    
+    img{
+        border: 1px solid $primaryColor;
+        padding: 1em;
+        width: 85%;
+        height: auto;
+    }
+
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.product_page_text_wrapper{
+
+    h1{
+        font-size: 1.9em;
+        font-weight: 400;
+        margin-bottom: .5em;
+    }
+
+    p{
+        color: $secondaryTextColor;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        line-height: 1.5em;
+    }
+
+    .price, .availability{
+        font-size: 1.5em;
+        color: $buttonBackground;
+    }
+
+    .product_button{
+        font-size: .85em;
+        display: inline-block;
+        padding: 1em 2em;
+        color: white;
+        background-color: $buttonBackground;
+        border-radius: .2em;
+        margin-top: 2em;
+    }
+
+    line-height: 2.5em;
+}
+
+.Reserved{
+    color: $secondaryTextColor;
+}
