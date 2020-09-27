@@ -112,9 +112,6 @@ header a {
   margin-bottom: 3em;
   margin-top: 3em;
 }
-.item_list .item:nth-child(odd) {
-  border-left: none;
-}
 
 .item {
   border-left: 1px solid #e6e6e6;
@@ -122,9 +119,16 @@ header a {
   text-align: center;
   width: 50%;
 }
+.item:nth-child(odd) {
+  border-left: none;
+}
 .item img {
   width: 75%;
   height: auto;
+  transition: transform 300ms;
+}
+.item img:hover {
+  transform: scale(0.7);
 }
 .item a {
   display: block;

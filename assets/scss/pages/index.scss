@@ -6,9 +6,7 @@
     width: 100%;
     border-bottom: 1px solid $primaryColor;
 
-    .item:nth-child(odd){
-        border-left: none;
-    }
+
 
     margin-bottom: 3em;
     margin-top: 3em;
@@ -16,9 +14,18 @@
 
 .item{
 
+    &:nth-child(odd){
+        border-left: none;
+    }
+
     img{
         width: 75%;
         height: auto;
+        transition: transform 300ms;
+
+        &:hover{
+            transform: scale(.7);
+        }
     }
 
     a{
