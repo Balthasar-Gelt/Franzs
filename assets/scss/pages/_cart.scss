@@ -1,15 +1,6 @@
-@import '../generals/variables.scss';
-@import '../generals/mixins.scss';
-
-.blue_button{
-    font-size: .85em;
-    display: inline-block;
-    padding: 1em 2em;
-    color: white;
-    background-color: $buttonBackground;
-    border-radius: .2em;
-    margin-top: 2em;
-}
+@import '../generals/classes';
+@import '../generals/variables';
+@import '../generals/mixins';
 
 .cart_header{
 
@@ -94,7 +85,7 @@
 
 #checkout_link{
 
-    @extend .blue_button;
+    @extend %blueButton;
 
-    padding: 1.5em 2em;
+    padding: 1.5em;
 }

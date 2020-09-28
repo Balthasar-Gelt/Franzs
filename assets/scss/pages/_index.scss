@@ -1,5 +1,6 @@
 @import '../generals/variables';
 @import '../generals/classes';
+@import '../generals/mixins';
 
 header {
 
@@ -36,12 +37,9 @@ header {
 .item_list{
     @include flexStart;
     width: 100%;
-    border-bottom: 1px solid $primaryColor;
-
-
-
     margin-bottom: 3em;
     margin-top: 3em;
+    border-top: 1px solid $primaryColor;
 }
 
 .item{
@@ -90,8 +88,8 @@ header {
     }
 
     position: relative;
-    border-left: 1px solid $primaryColor;
-    border-top: 1px solid $primaryColor;
+    border-right: 1px solid $primaryColor;
+    border-bottom: 1px solid $primaryColor;
     text-align: center;
     width: 50%;
     padding-bottom: 7.5em;

@@ -1,0 +1,25 @@
+@import './_variables';
+
+@mixin flex(){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin flexStart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+@mixin blueButton {
+        font-size: .85em;
+        display: inline-block;
+        padding: 1em 2em;
+        color: white;
+        background-color: $buttonBackground;
+        border-radius: .2em;
+        margin-top: 2em;
+}

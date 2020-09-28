@@ -71,7 +71,7 @@ form{
     }
 
     button{
-        @extend .blue_button;
+        @include blueButton;
 
         border: none;
     }

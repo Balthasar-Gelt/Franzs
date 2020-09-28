@@ -1,0 +1,17 @@
+@import 'main-nav';
+@import 'search-bar';
+@import 'messages';
+@import 'responsive-menu';
+@import '../generals/_variables.scss';
+
+.overlay{
+    display: none;
+}
+
+#log_in_form_wrapper{
+    display: none;
+}
+
+#register_form_wrapper{
+    display: none;
+}

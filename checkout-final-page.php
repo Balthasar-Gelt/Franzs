@@ -20,7 +20,7 @@ include 'partials/header.php';
 
 ?>
 
-<div class="main_padding container">
+<div class="checkout-final">
 
     <?php
 

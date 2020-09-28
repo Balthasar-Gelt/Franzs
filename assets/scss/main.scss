@@ -1,7 +1,10 @@
-@import './generals/general-settings.scss';
-@import './header/header.scss';
-@import './pages/pages.scss';
+@import './generals/_general-settings.scss';
+@import './nav/nav.scss';
 @import './footer/footer.scss';
-@import './pages/shop.scss';
-@import './pages/product-page.scss';
-@import './pages/cart.scss';
+@import './generals/form.scss';
+@import './pages/index';
+@import './pages/shop';
+@import './pages/product-page';
+@import './pages/cart';
+@import './pages/checout';
+@import './pages/checkout-final';
