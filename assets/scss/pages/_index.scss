@@ -1,5 +1,4 @@
 @import '../generals/variables';
-@import '../generals/classes';
 @import '../generals/mixins';
 
 header {
@@ -24,11 +23,6 @@ header {
         font-size: 1.3em;
         font-weight: 300;
         margin-bottom: .5em;
-    }
-
-    a{
-        @extend %blueButton;
-        margin-top: 1em;
     }
 
     text-align: center;

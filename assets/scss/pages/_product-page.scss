@@ -1,5 +1,4 @@
 @import '../generals/variables';
-@import '../generals/classes';
 
 .image_wrapper{
     
@@ -32,16 +31,6 @@
     .price, .availability{
         font-size: 1.5em;
         color: $buttonBackground;
-    }
-
-    .product_button{
-        font-size: .85em;
-        display: inline-block;
-        padding: 1em 2em;
-        color: white;
-        background-color: $buttonBackground;
-        border-radius: .2em;
-        margin-top: 2em;
     }
 
     line-height: 2.5em;

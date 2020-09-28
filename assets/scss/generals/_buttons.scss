@@ -1,0 +1,36 @@
+@import './classes';
+
+// PRODUCT PAGE BUTTON
+
+.product_button{
+    @extend %blueButton;
+}
+
+// HEADER BUTTON
+
+header{
+
+    a{
+        @extend %blueButton;
+        margin-top: 1em;
+    }
+}
+
+// CART - CHECKOUT LINK
+
+#checkout_link{
+
+    @extend %blueButton;
+    padding: 1.5em;
+}
+
+// FORM BUTTON
+
+form{
+
+    button{
+        @extend %blueButton;
+        border: none;
+    }
+}
+

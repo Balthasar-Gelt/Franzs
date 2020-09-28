@@ -188,26 +188,6 @@ form .radio_button_wrapper label {
   flex-wrap: wrap;
   padding: 0 1em;
 }
-form button {
-  font-size: 0.85em;
-  display: inline-block;
-  padding: 1em 2em;
-  color: white;
-  background-color: #207dff;
-  border-radius: 0.2em;
-  margin-top: 2em;
-  border: none;
-}
-
-#checkout_link, header a {
-  font-size: 0.85em;
-  display: inline-block;
-  padding: 1em 2em;
-  color: white;
-  background-color: #207dff;
-  border-radius: 0.2em;
-  margin-top: 2em;
-}
 
 header {
   text-align: center;
@@ -229,9 +209,6 @@ header h3 {
   font-size: 1.3em;
   font-weight: 300;
   margin-bottom: 0.5em;
-}
-header a {
-  margin-top: 1em;
 }
 
 .item_list {
@@ -330,16 +307,6 @@ header a {
   border-left: 1px solid #e6e6e6;
 }
 
-#checkout_link, header a {
-  font-size: 0.85em;
-  display: inline-block;
-  padding: 1em 2em;
-  color: white;
-  background-color: #207dff;
-  border-radius: 0.2em;
-  margin-top: 2em;
-}
-
 .image_wrapper {
   text-align: center;
   margin-bottom: 2em;
@@ -369,28 +336,9 @@ header a {
   font-size: 1.5em;
   color: #207dff;
 }
-.product_page_text_wrapper .product_button {
-  font-size: 0.85em;
-  display: inline-block;
-  padding: 1em 2em;
-  color: white;
-  background-color: #207dff;
-  border-radius: 0.2em;
-  margin-top: 2em;
-}
 
 .Reserved {
   color: #8c92a0;
-}
-
-#checkout_link, header a {
-  font-size: 0.85em;
-  display: inline-block;
-  padding: 1em 2em;
-  color: white;
-  background-color: #207dff;
-  border-radius: 0.2em;
-  margin-top: 2em;
 }
 
 .cart_header {
@@ -460,10 +408,6 @@ header a {
   font-size: 1em;
 }
 
-#checkout_link {
-  padding: 1.5em;
-}
-
 .product_table_checkout {
   display: none;
 }
@@ -521,6 +465,28 @@ header a {
 }
 .checkout-final h2 {
   font-size: 1.5em;
+}
+
+form button, #checkout_link, header a, .product_button {
+  font-size: 0.85em;
+  display: inline-block;
+  padding: 1em 2em;
+  color: white;
+  background-color: #207dff;
+  border-radius: 0.2em;
+  margin-top: 2em;
+}
+
+header a {
+  margin-top: 1em;
+}
+
+#checkout_link {
+  padding: 1.5em;
+}
+
+form button {
+  border: none;
 }
 
 /*# sourceMappingURL=main.css.map*/

@@ -69,11 +69,4 @@ form{
         border: 1px solid $primaryColor;
         @include flex;
     }
-
-    button{
-        @include blueButton;
-
-        border: none;
-    }
-
 }
