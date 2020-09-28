@@ -262,9 +262,6 @@ header h3 {
   height: auto;
   transition: transform 300ms;
 }
-.item img:hover {
-  transform: scale(0.7);
-}
 .item a {
   display: block;
   width: 100%;
@@ -287,6 +284,9 @@ header h3 {
 }
 .item .item_text span {
   color: #8c92a0;
+}
+.item:hover img {
+  transform: scale(0.7);
 }
 
 .one_product_row {

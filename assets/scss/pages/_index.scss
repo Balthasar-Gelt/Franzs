@@ -46,10 +46,6 @@ header {
         width: 75%;
         height: auto;
         transition: transform 300ms;
-
-        &:hover{
-            transform: scale(.7);
-        }
     }
 
     a{
@@ -79,6 +75,10 @@ header {
         left: 50%;
         transform: translateX(-50%);
         line-height: 1.75em;
+    }
+
+    &:hover img{
+        transform: scale(.7);
     }
 
     position: relative;
