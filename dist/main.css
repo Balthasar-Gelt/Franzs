@@ -394,7 +394,31 @@ nav img {
 }
 
 .message_container {
-  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  padding: 0.5em;
+  border: 0.2em solid;
+  background-color: white;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+#good_message {
+  border-color: #8bb911;
+  min-width: 60%;
+}
+
+#warning_message {
+  border-color: #fe9600;
+  width: 100%;
+}
+
+#error_message {
+  border-color: #fe4236;
+  width: 100%;
 }
 
 .menu_overlay {

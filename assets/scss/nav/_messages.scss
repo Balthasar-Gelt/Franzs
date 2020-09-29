@@ -1,0 +1,29 @@
+@import '../generals/variables';
+
+.message_container{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    padding: .5em;
+    border: .2em solid;
+    background-color: white;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+#good_message{
+    border-color: $goodColor;
+    min-width: 60%;
+}
+
+#warning_message{
+    border-color: $warningColor;
+    width: 100%;
+}
+
+#error_message{
+    border-color: $errorColor;
+    width: 100%;
+}
