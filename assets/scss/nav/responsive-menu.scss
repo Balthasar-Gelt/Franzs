@@ -3,7 +3,17 @@
     .overlay_img_wrapper{
 
         img{
+
+            &:hover{
+                transform: scale(2);
+            }
+
+            &:active{
+                transform: scale(1);
+            }
+
             transform: scale(1.5);
+            transition: transform 300ms;
         }
 
         padding-right: 2em;
@@ -22,6 +32,7 @@
     }
 
     display: none;
+    opacity: 0;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.700);
     width: 100%;
@@ -30,5 +41,5 @@
     left: 0;
     z-index: 9;
     padding-top: 3em;
+    transition: opacity 300ms;
 }
-

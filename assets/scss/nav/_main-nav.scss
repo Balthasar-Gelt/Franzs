@@ -15,7 +15,17 @@ nav{
     }
 
     img{
+
+        &:hover{
+            transform: scale(1.2);
+        }
+
+        &:active{
+            transform: scale(.9);
+        }
+
         cursor: pointer;
+        transition: transform 300ms;
     }
 
     padding-top: 1em;
