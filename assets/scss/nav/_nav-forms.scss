@@ -6,9 +6,12 @@
         margin: 0;
     }
 
+    visibility: hidden;
+    width: 100%;
     position: fixed;
     top: 10%;
-    transform: translateY(-10%);
+    left: 50%;
+    transform: translate(-50%, 10%);
     padding: 1em;
     background-color: white;
     opacity: 0;
