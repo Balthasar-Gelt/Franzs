@@ -191,10 +191,7 @@ include 'partials/header.php';
                 <span class="alert phone_alert">Invalid input</span>
             </div>
 
-            <div class="display_flex">
-                <div></div>
-                <button id="change_user_data_form_button" class="product_button" type="submit">Save changes</button>
-            </div>
+            <button id="change_user_data_form_button" class="product_button" type="submit">Save changes</button>
         </form>
 
     </section>

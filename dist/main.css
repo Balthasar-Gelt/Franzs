@@ -328,6 +328,11 @@ a {
   padding-left: 0.5em;
 }
 
+.page_title {
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
 h1, h2, h3 {
   margin: 0;
 }
@@ -1020,6 +1025,86 @@ header a {
 
 form button {
   border: none;
+}
+
+.dashboard_section {
+  line-height: 1.5em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+.dashboard_section form {
+  text-align: left;
+  line-height: 1em;
+}
+.dashboard_section .order_number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dashboard_section .order_number span {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.dashboard_section img {
+  width: 40%;
+}
+.dashboard_section h1 {
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 1em;
+}
+.dashboard_section h2, .dashboard_section h3 {
+  font-weight: 400;
+}
+.dashboard_section span {
+  font-weight: 300;
+}
+.dashboard_section li {
+  margin-bottom: 0.3em;
+}
+.dashboard_section li:last-child {
+  margin-bottom: 0;
+}
+
+.order_history_list {
+  font-weight: 300;
+  line-height: 1.5em;
+  text-align: left;
+}
+.order_history_list li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.order_history_list li:first-child {
+  padding-top: 0;
+}
+.order_history_list li:last-child {
+  border-bottom: none;
+}
+.order_history_list h2 {
+  font-size: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.order_history_list span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.order_history_list strong {
+  font-weight: 500;
+}
+
+.dashboard_arrow_container {
+  padding: 0.7em 0;
+  background-color: whitesmoke;
+}
+.dashboard_arrow_container img {
+  width: 10%;
 }
 
 /*# sourceMappingURL=main.css.map*/
