@@ -30,26 +30,14 @@ $products = $db->fetchRows('SELECT Price,id,filename,Name,Status,Price FROM PROD
                     <h1>FILTER BY PRICE</h1>
                     
                     <div class="small_margin_bottom">
-                        <span class="min_price">0</span>
+                        <span id="slider-snap-value-lower">0</span>
                         <span>-</span>
-                        <span class="max_price">1000</span>
+                        <span id="slider-snap-value-upper">1000</span>
                     </div>
 
-                    <div class="double_handle_slider">
-                        <input type="range" id="input_left" min="0" max="1000" value="0">
-                        <input type="range" id="input_right" min="0" max="1000" value="1000">
+                    <div class="slider"></div>
 
-                        <div class="slider_container">
-                            <div class="slider">
-                                <div class="track"></div>
-                                <div class="range"></div>
-                                <div class="handle left"></div>
-                                <div class="handle right"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                        <a id="filter_button" class="product_button blue_flat_button" href="#">FILTER</a>
+                    <a id="filter_button" class="product_button blue_flat_button" href="#">FILTER</a>
 
                     </li>
                 </ul>

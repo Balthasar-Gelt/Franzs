@@ -17,7 +17,7 @@ function toggleResponsiveAside(){
 function showOverlay(){
 
     overlay.style.display = 'block';
-    aside.style.display = 'block';
+    aside.style.visibility = 'visible';
 
     setTimeout(() => {
         overlay.classList.toggle('fade_in');
@@ -31,7 +31,7 @@ function hideOverlay(){
     overlay.classList.toggle('fade_in');
 
     setTimeout(() => {
-        aside.style.display = 'none';
+        aside.style.visibility = 'hidden';
         overlay.style.display = 'none';
     }, 300);
 }

@@ -1,87 +1,40 @@
-//
-//  PRICE FILTER
-//
+import noUiSlider from 'nouislider';
 
-let inputLeft, inputRight, handleLeft, handleRight, range,
-priceMin, priceMax, valueOffset, maxValue, trackWidth,
-filterButton, products;
+let snapSlider, snapValues, filterButton, products;
 
 export function initializeFilter(){
 
-    inputLeft  = document.querySelector("#input_left");
-    inputRight = document.querySelector("#input_right");
+    snapSlider = document.querySelector('.slider');
 
-    handleLeft = document.querySelector(".handle.left");
-    handleRight = document.querySelector(".handle.right");
+    noUiSlider.create(snapSlider, {
+        start: [0, 1000],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 1000
+        }
+    });
 
-    priceMin = document.querySelector('.min_price');
-    priceMax = document.querySelector('.max_price');
-
-    trackWidth = document.querySelector(".slider .track").offsetWidth;
-    range = document.querySelector(".slider .range");
-    maxValue = inputLeft.max;
-    valueOffset = 50;
-
-    filterButton = document.querySelector("#filter_button"),
-    products = document.querySelectorAll(".item");
-
-    inputLeft.addEventListener('input', leftInputEventAction);
-    inputRight.addEventListener('input', rightInputEventAction);
-
-    filterButton.addEventListener('click', e => filterButtonEventAction(e) );
-}
-
-function leftInputEventAction(){
-
-    let valueLeft = Math.min(inputLeft.value, parseInt(inputRight.value) - valueOffset);
-
-    inputLeft.value = valueLeft;
-
-    handleLeft.style.left = CalculateValue(CalculatePercentage(inputLeft.value,maxValue), trackWidth) + 'px';
+    snapValues = [
+        document.getElementById('slider-snap-value-lower'),
+        document.getElementById('slider-snap-value-upper')
+    ];
     
-    range.style.left = CalculateValue(CalculatePercentage(inputLeft.value,maxValue), trackWidth) + 'px';
+    snapSlider.noUiSlider.on('update', function (values, handle) {
+        snapValues[handle].innerHTML = values[handle];
+    });
 
-    priceMin.innerHTML = inputLeft.value;
+    products = document.querySelectorAll('.item_list li');
+    filterButton = document.querySelector('#filter_button');
+    filterButton.addEventListener('click', e => filterButtonEventAction(e, snapValues[0].innerHTML, snapValues[1].innerHTML));
 }
 
-function rightInputEventAction(){
-
-    let valueRight = Math.max(inputRight.value, parseInt(inputLeft.value) + valueOffset);
-
-    inputRight.value = valueRight;
-    
-    handleRight.style.right = CalculateRight(CalculateValue(CalculatePercentage(inputRight.value,maxValue), trackWidth), trackWidth) + "px";
-
-    range.style.right = CalculateRight(CalculateValue(CalculatePercentage(inputRight.value,maxValue), trackWidth), trackWidth) + "px";
-
-    priceMax.innerHTML = inputRight.value;
-}
-
-function CalculatePercentage(value, maxValue){
-
-    return (value / maxValue) * 100;
-}
-
-function CalculateValue(percentage, maxValue){
-    
-    return (maxValue / 100) * percentage;
-}
-
-function CalculateRight(value, maxValue){
-
-    return maxValue - value;
-}
-
-//
-//  FILTER BUTTON
-//
-
-function filterButtonEventAction(event){
+function filterButtonEventAction(event, minPrice, maxPrice){
     event.preventDefault();
 
-    let minPrice = parseInt(inputLeft.value),
-        maxPrice = parseInt(inputRight.value);
-
+    minPrice = parseFloat(minPrice),
+    maxPrice = parseFloat(maxPrice);
+console.log(products);
     products.forEach(product => {
 
         let productPrice = parseInt(product.dataset.price);

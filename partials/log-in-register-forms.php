@@ -2,8 +2,7 @@
 
 <div id="log_in_form_wrapper" class="form_wrapper">
 
-    <div class="display_flex">
-        <div></div>
+    <div class="form_img_wrapper">
         <img src="assets/other/remove-24px.svg" alt="remove">
     </div>
 
@@ -30,8 +29,7 @@
 
 <div id="register_form_wrapper" class="form_wrapper">
 
-    <div class="display_flex">
-        <div></div>
+    <div class="form_img_wrapper">
         <img src="assets/other/remove-24px.svg" alt="remove">
     </div>
 

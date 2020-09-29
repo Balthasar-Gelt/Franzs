@@ -28,7 +28,7 @@
     }
 
     width: 80%;
-    display: none;
+    visibility: hidden;
     position: fixed;
     top: 10%;
     right: 0;
@@ -69,11 +69,31 @@
     }
 }
 
-.double_handle_slider{
-    position: relative;
+// PRICE SLIDER
 
-    input{
-        position: absolute;
-        pointer-events: all;
-    }
+@import 'nouislider/distribute/nouislider.css';
+
+.noUi-target{
+    margin-top: 1em;
+}
+
+.noUi-connect{
+    background: $buttonBackground;
+}
+
+.noUi-base{
+    background-color: $primaryColor;
+}
+
+.noUi-handle{
+    border-color: $primaryColor;
+    box-shadow: none;
+}
+
+.noUi-handle-lower{
+    transform: translateX(16px);
+}
+
+.noUi-handle-upper{
+    transform: translateX(-16px);
 }
