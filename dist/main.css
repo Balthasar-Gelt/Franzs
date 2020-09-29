@@ -450,7 +450,14 @@ nav img {
 }
 
 .form_wrapper {
+  position: fixed;
+  top: 10%;
+  transform: translateY(-10%);
   padding: 1em;
+  background-color: white;
+  opacity: 0;
+  z-index: 9;
+  transition: transform 300ms, opacity 300ms;
 }
 .form_wrapper button {
   margin: 0;
@@ -471,14 +478,8 @@ nav img {
 
 .overlay {
   display: none;
-}
-
-#log_in_form_wrapper {
-  display: none;
-}
-
-#register_form_wrapper {
-  display: none;
+  opacity: 0;
+  z-index: 8;
 }
 
 footer {
