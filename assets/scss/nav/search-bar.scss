@@ -9,26 +9,60 @@
 
     input{
         border: none;
-        width: 65%;
-        height: 2em;
+        width: 70%;
+        height: 35px;
+        padding-left: .5em;
     }
 
+    border-top: 1px solid $primaryColor;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 10%;
-    display: none;
-    background-color: $primaryColor;
-    padding-left: 1em;
+    visibility: hidden;
+    background-color: white;
     z-index: 8;
 }
 
 
 
 #close_search{
+    cursor: pointer;
     display: block;
     width: 30%;
     text-align: center;
     background-color: $buttonBackground;
     color: white;
     padding: .5em;
+    transition: background-color 300ms;
+}
+
+#close_search:hover{
+    background-color: darken($color: $buttonBackground, $amount: 5%);
+}
+
+.products_search_container{
+
+    li{
+        padding: 1em;
+        border-bottom: 1px solid $primaryColor;
+    }
+
+    ul{
+        overflow-y: scroll;
+        min-height: 1px;
+        max-height: 90vh;
+    }
+
+    img{
+        width: 40%;
+    }
+
+    h1{
+        font-weight: 400;
+        font-size: 1.5em;
+        margin-bottom: .5em;
+    }
+
+    line-height: 1.5em;
+    text-align: center;
 }
