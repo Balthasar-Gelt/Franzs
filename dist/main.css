@@ -924,9 +924,10 @@ header h3 {
 }
 
 .credit_card_wrapper {
+  font-weight: 300;
   border: 1px solid #e6e6e6;
   border-bottom: none;
-  padding: 1em 0;
+  padding: 1em 0.5em;
   background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
@@ -949,6 +950,42 @@ header h3 {
 .card_fields_wrapper {
   border: 1px solid #e6e6e6;
   padding: 1em 0.5em 0 0.5em;
+}
+
+.product_table_checkout {
+  text-align: center;
+}
+.product_table_checkout img {
+  width: 60%;
+  margin: 1em auto;
+  display: block;
+}
+.product_table_checkout span {
+  display: block;
+  margin-bottom: 1em;
+}
+.product_table_checkout li {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.checkout_price_wrapper {
+  padding-top: 1em;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkout_total {
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.checkout_total h3 {
+  font-weight: 500;
 }
 
 .checkout-final {
