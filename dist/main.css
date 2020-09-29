@@ -364,7 +364,33 @@ nav img {
 }
 
 #search_bar {
+  width: 100%;
+  position: absolute;
+  top: 10%;
   display: none;
+  background-color: #e6e6e6;
+  padding-left: 1em;
+  z-index: 8;
+}
+#search_bar .search_input_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#search_bar input {
+  border: none;
+  width: 65%;
+  height: 2em;
+}
+
+#close_search {
+  display: block;
+  width: 30%;
+  text-align: center;
+  background-color: #207dff;
+  color: white;
+  padding: 0.5em;
 }
 
 .message_container {
