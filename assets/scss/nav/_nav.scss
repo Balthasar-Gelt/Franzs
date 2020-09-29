@@ -4,15 +4,5 @@
 @import 'responsive-menu';
 @import '../generals/_variables.scss';
 @import './nav-forms';
+@import './overlay';
 
-.overlay{
-    display: none;
-}
-
-#log_in_form_wrapper{
-    display: none;
-}
-
-#register_form_wrapper{
-    display: none;
-}
