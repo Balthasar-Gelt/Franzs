@@ -472,6 +472,7 @@ nav img:active {
   line-height: 1.5em;
   text-align: center;
   transition: opacity 300ms;
+  z-index: 99;
 }
 
 #good_message {
@@ -545,18 +546,28 @@ nav img:active {
 .form_wrapper button {
   margin: 0;
 }
+.form_wrapper a {
+  color: #207dff;
+}
+.form_wrapper a:hover {
+  color: #0062ec;
+}
+.form_wrapper a:active {
+  color: #0058d3;
+}
+.form_wrapper img {
+  transition: transform 300ms;
+}
+.form_wrapper img:hover {
+  transform: scale(1.5);
+}
+.form_wrapper img:active {
+  transform: scale(0.7);
+}
 
 .form_img_wrapper {
   text-align: right;
   margin-bottom: 1em;
-}
-
-#register_here {
-  color: #207dff;
-}
-
-#log_in_here {
-  color: #207dff;
 }
 
 .overlay {
@@ -623,6 +634,7 @@ form .form_input {
   position: relative;
 }
 form input {
+  padding-left: 0.5em;
   margin-bottom: 1.5em;
   height: 4em;
   width: 100%;
@@ -1169,7 +1181,8 @@ form button {
   background-color: rgba(0, 0, 0, 0.15);
 }
 .dashboard_arrow_container img {
-  width: 10%;
+  height: 75%;
+  width: auto;
   transform: translateY(15%);
 }
 

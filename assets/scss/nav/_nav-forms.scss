@@ -6,6 +6,31 @@
         margin: 0;
     }
 
+    a{
+        color: $buttonBackground;
+
+        &:hover{
+            color: darken($color: $buttonBackground, $amount: 10%);
+        }
+
+        &:active{
+            color: darken($color: $buttonBackground, $amount: 15%);
+        }
+    }
+
+    img{
+
+        &:hover{
+            transform: scale(1.5)
+        }
+        
+        &:active{
+            transform: scale(.7)
+        }
+        
+        transition: transform 300ms;
+    }
+
     opacity: 0;
     visibility: hidden;
     width: 100%;
@@ -22,12 +47,4 @@
 .form_img_wrapper{
     text-align: right;
     margin-bottom: 1em;
-}
-
-#register_here{
-    color: $buttonBackground;
-}
-
-#log_in_here{
-    color: $buttonBackground;
 }
