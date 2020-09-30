@@ -1,6 +1,7 @@
 @import '../generals/variables';
 
 .message_container{
+    visibility: hidden;
     position: fixed;
     top: 10%;
     left: 50%;
