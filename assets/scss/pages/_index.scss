@@ -61,6 +61,7 @@ header {
     .item_text{
 
         h1{
+            color: black !important;
             font-size: 1.35em;
             font-weight: 400;
         }
@@ -106,6 +107,11 @@ header {
         background-color: black;
         color: white;
         margin: 1.75em 0;
+        transition: background-color 300ms;
+
+        &:hover{
+            background-color: lighten($color: black, $amount: 20%);
+        }
     }
 
     text-align: center;

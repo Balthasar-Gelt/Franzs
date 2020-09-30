@@ -5,3 +5,13 @@
 .display_block{
     display: block !important;
 }
+
+.slide_up{
+    opacity: 1 !important;
+    transform: translateY(0%) !important;
+}
+
+.slide_in{
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}

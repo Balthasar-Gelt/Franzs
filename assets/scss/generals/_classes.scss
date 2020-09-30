@@ -1,9 +1,20 @@
+@import './variables';
+
 %blueButton{
     font-size: .85em;
     display: inline-block;
     padding: 1em 2em;
-    color: white;
+    color: white !important;
     background-color: $buttonBackground;
     border-radius: .2em;
     margin-top: 2em;
+    transition: background-color 300ms;
+
+    &:hover{
+        background-color: darken($color: $buttonBackground, $amount: 5%);
+    }
+
+    &:active{
+        background-color: darken($color: $buttonBackground, $amount: 10%); 
+    }
 }

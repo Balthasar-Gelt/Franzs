@@ -447,7 +447,7 @@ let arrowContainers;
 
 function inintializeScrolling(){
 
-    arrowContainers = document.querySelectorAll('.arrow_container_overlay');
+    arrowContainers = document.querySelectorAll('.dashboard_arrow_container');
 
     for (const container of arrowContainers) {
         container.addEventListener('click', e => changeWrapperMaxHeight(e));
@@ -1312,14 +1312,14 @@ function initializeLogOutLink(){
     badSite = 'http://localhost:8888/Dealers/dashboard.php';
 
     for (const link of _general_form_functionality_links_log_out_links__WEBPACK_IMPORTED_MODULE_2__["logOutlinks"]) {
-        link.addEventListener('click', e => logOutLinkClickAction(e));
+        link.addEventListener('click', e => logOutLinkClickAction(e, link));
     }
 }
 
-function logOutLinkClickAction(e){
+function logOutLinkClickAction(e, logOutLink){
     e.preventDefault();
 
-    fetch(logOutlink.href,{ headers: { fetch : 'true' }})
+    fetch(logOutLink.href,{ headers: { fetch : 'true' }})
 
     .then( response => (response.ok ? response.json() : false) )
 
@@ -1396,13 +1396,14 @@ function initializeRegister(){
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initializeBurger", function() { return initializeBurger; });
-let burger, menuOverlay, overlayEscape;
+let burger, menuOverlay, overlayEscape, menuLists;
 
 function initializeBurger(){
 
     burger = document.querySelector('.menu_icon');
     menuOverlay = document.querySelector('.menu_overlay');
     overlayEscape = document.querySelector('.menu_overlay img');
+    menuLists = document.querySelectorAll('.menu_overlay ul');
 
     burger.addEventListener('click', showMenuOverlay);
     overlayEscape.addEventListener('click', hideMenuOverlay);
@@ -1413,11 +1414,20 @@ function showMenuOverlay(){
     menuOverlay.classList.toggle('display_block');
 
     setTimeout(() => {
+
         menuOverlay.classList.toggle('fade_in');
+
+        menuLists.forEach(list => {
+            list.classList.add('slide_up');
+        });
     }, 50);
 }
 
 function hideMenuOverlay(){
+
+    menuLists.forEach(list => {
+        list.classList.remove('slide_up');
+    });
 
     menuOverlay.classList.toggle('fade_in');
 

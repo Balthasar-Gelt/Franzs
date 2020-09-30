@@ -12,6 +12,15 @@ body{
 a{
     text-decoration: none;
     color: $linkColor;
+    transition: color 300ms;
+
+    &:hover{
+        color: $buttonBackground;
+    }
+
+    &:active{
+        color: darken($color: $buttonBackground, $amount: 10%);
+    }
 }
 
 .container{

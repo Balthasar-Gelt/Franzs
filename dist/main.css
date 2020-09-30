@@ -321,6 +321,13 @@ body {
 a {
   text-decoration: none;
   color: black;
+  transition: color 300ms;
+}
+a:hover {
+  color: #207dff;
+}
+a:active {
+  color: #0062ec;
 }
 
 .container {
@@ -353,6 +360,16 @@ p {
 
 .display_block {
   display: block !important;
+}
+
+.slide_up {
+  opacity: 1 !important;
+  transform: translateY(0%) !important;
+}
+
+.slide_in {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
 
 nav {
@@ -443,6 +460,7 @@ nav img:active {
 }
 
 .message_container {
+  visibility: hidden;
   position: fixed;
   top: 10%;
   left: 50%;
@@ -453,6 +471,7 @@ nav img:active {
   background-color: white;
   line-height: 1.5em;
   text-align: center;
+  transition: opacity 300ms;
 }
 
 #good_message {
@@ -488,6 +507,7 @@ nav img:active {
   text-align: right;
 }
 .menu_overlay .overlay_img_wrapper img {
+  cursor: pointer;
   transform: scale(1.5);
   transition: transform 300ms;
 }
@@ -505,18 +525,21 @@ nav img:active {
   text-align: center;
   line-height: 2em;
   font-size: 1.75em;
+  transform: translateY(40%);
+  transition: transform 300ms;
 }
 
 .form_wrapper {
+  opacity: 0;
   visibility: hidden;
   width: 100%;
   position: fixed;
   top: 10%;
-  left: 50%;
-  transform: translate(-50%, 10%);
+  left: 0;
+  transform: translateY(30%);
   padding: 1em;
   background-color: white;
-  z-index: 9;
+  z-index: 10;
   transition: transform 300ms, opacity 300ms;
 }
 .form_wrapper button {
@@ -537,9 +560,16 @@ nav img:active {
 }
 
 .overlay {
-  display: none;
+  visibility: hidden;
   opacity: 0;
-  z-index: 8;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.445);
+  transition: opacity 300ms;
 }
 
 footer {
@@ -697,6 +727,7 @@ header h3 {
   line-height: 1.75em;
 }
 .item .item_text h1 {
+  color: black !important;
   font-size: 1.35em;
   font-weight: 400;
 }
@@ -723,6 +754,10 @@ header h3 {
   background-color: black;
   color: white;
   margin: 1.75em 0;
+  transition: background-color 300ms;
+}
+.one_product_row a:hover {
+  background-color: #333333;
 }
 
 .side_content {
@@ -731,8 +766,11 @@ header h3 {
   position: fixed;
   top: 10%;
   right: 0;
+  opacity: 0;
+  transform: translateX(100%);
   background-color: white;
   z-index: 7;
+  transition: opacity 300ms, transform 300ms;
 }
 .side_content .side_content_cell {
   font-weight: 300;
@@ -777,6 +815,10 @@ header h3 {
   border-radius: 50%;
   border: 1px solid black;
   background-color: white;
+  transition: transform 300ms;
+}
+#aside_button:active {
+  transform: scale(1);
 }
 
 .shop_items .item_list {
@@ -1009,10 +1051,17 @@ form button, #checkout_link, header a, .product_button {
   font-size: 0.85em;
   display: inline-block;
   padding: 1em 2em;
-  color: white;
+  color: white !important;
   background-color: #207dff;
   border-radius: 0.2em;
   margin-top: 2em;
+  transition: background-color 300ms;
+}
+form button:hover, #checkout_link:hover, header a:hover, .product_button:hover {
+  background-color: #076eff;
+}
+form button:active, #checkout_link:active, header a:active, .product_button:active {
+  background-color: #0062ec;
 }
 
 header a {
@@ -1100,11 +1149,34 @@ form button {
 }
 
 .dashboard_arrow_container {
-  padding: 0.7em 0;
+  height: 2.5em;
+  position: relative;
   background-color: whitesmoke;
+}
+.dashboard_arrow_container .arrow_container_overlay {
+  width: 100%;
+  z-index: 2;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 300ms;
+}
+.dashboard_arrow_container .arrow_container_overlay:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.dashboard_arrow_container .arrow_container_overlay:active {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 .dashboard_arrow_container img {
   width: 10%;
+  transform: translateY(15%);
+}
+
+.dashboard_section_content_wrapper {
+  overflow-y: hidden;
+  max-height: 0px;
+  transition: max-height 300ms;
 }
 
 /*# sourceMappingURL=main.css.map*/

@@ -12,6 +12,7 @@
                 transform: scale(1);
             }
 
+            cursor: pointer;
             transform: scale(1.5);
             transition: transform 300ms;
         }
@@ -29,6 +30,8 @@
         text-align: center;
         line-height: 2em;
         font-size: 1.75em;
+        transform: translateY(40%);
+        transition: transform 300ms;
     }
 
     display: none;
