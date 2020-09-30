@@ -81,10 +81,38 @@
 
 .dashboard_arrow_container{
 
-    img{
-        width: 10%;
+    .arrow_container_overlay{
+
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.100);
+        }
+
+        &:active{
+            background-color: rgba(0, 0, 0, 0.150);
+        }
+
+        width: 100%;
+        z-index: 2;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: background-color 300ms;
     }
 
-    padding: .7em 0;
+    img{
+        width: 10%;
+        transform: translateY(15%);
+    }
+
+
+    height: 2.5em;
+    position: relative;
     background-color: $lighterPrimary;
+}
+
+.dashboard_section_content_wrapper{
+    overflow-y: hidden;
+    max-height: 0px;
+    transition: max-height 300ms;
 }

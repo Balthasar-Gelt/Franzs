@@ -2,7 +2,7 @@ let arrowContainers;
 
 export function inintializeScrolling(){
 
-    arrowContainers = document.querySelectorAll('.arrow_container_overlay');
+    arrowContainers = document.querySelectorAll('.dashboard_arrow_container');
 
     for (const container of arrowContainers) {
         container.addEventListener('click', e => changeWrapperMaxHeight(e));
