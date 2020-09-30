@@ -11,14 +11,14 @@ export function initializeLogOutLink(){
     badSite = 'http://localhost:8888/Dealers/dashboard.php';
 
     for (const link of logOutlinks) {
-        link.addEventListener('click', e => logOutLinkClickAction(e));
+        link.addEventListener('click', e => logOutLinkClickAction(e, link));
     }
 }
 
-function logOutLinkClickAction(e){
+function logOutLinkClickAction(e, logOutLink){
     e.preventDefault();
 
-    fetch(logOutlink.href,{ headers: { fetch : 'true' }})
+    fetch(logOutLink.href,{ headers: { fetch : 'true' }})
 
     .then( response => (response.ok ? response.json() : false) )
 
