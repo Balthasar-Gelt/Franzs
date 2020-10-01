@@ -51,7 +51,7 @@ header {
     a{
         display: block;
         width: 100%;
-        padding: .5em;
+        padding: 1em;
     }
 
     h1{
@@ -116,4 +116,52 @@ header {
     }
 
     text-align: center;
+}
+
+// RESPONSIVE
+
+@media (min-width: 750px) {
+
+    .one_product_row{
+
+        img{
+            max-width: unset;
+            width: 50%;
+        }
+
+        h1{
+            font-size: 6vw;
+        }
+
+        a{
+            font-size: 1.75vw;
+        }
+
+        @include flex;
+        justify-content: flex-end;
+    }
+
+    .item_list{
+    
+        .item{
+            width: 33.3333333%;
+        }
+    }
+
+    header{
+
+        .header_main{
+            @include flex;
+            justify-content: flex-end;
+        }
+
+        .header_title{
+            font-size: 2.3vw;
+        }
+
+        img{
+            display: block;
+            width: 40%;
+        }
+    }
 }

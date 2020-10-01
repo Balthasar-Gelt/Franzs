@@ -734,7 +734,7 @@ header h3 {
 .item a {
   display: block;
   width: 100%;
-  padding: 0.5em;
+  padding: 1em;
 }
 .item h1 {
   font-size: 1em;
@@ -782,6 +782,44 @@ header h3 {
   background-color: #333333;
 }
 
+@media (min-width: 750px) {
+  .one_product_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .one_product_row img {
+    max-width: unset;
+    width: 50%;
+  }
+  .one_product_row h1 {
+    font-size: 6vw;
+  }
+  .one_product_row a {
+    font-size: 1.75vw;
+  }
+
+  .item_list .item {
+    width: 33.3333333%;
+  }
+
+  header .header_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  header .header_title {
+    font-size: 2.3vw;
+  }
+  header img {
+    display: block;
+    width: 40%;
+  }
+}
 .side_content {
   max-width: 25em;
   width: 80%;
