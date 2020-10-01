@@ -49,6 +49,7 @@ form{
     .radio_button_wrapper{
 
         input{
+            cursor: pointer;
             width: 30%;
             margin: 0;
             border: none;
@@ -56,6 +57,12 @@ form{
         }
 
         label{
+
+            &:hover{
+                background-color: darken($color: $lighterPrimary, $amount: 5%);
+            }
+
+            cursor: pointer;
             position: static;
             width: 70%;
             height: 5.5em;
@@ -64,6 +71,7 @@ form{
             background-color: $lighterPrimary;
             @include flex;
             padding: 0 1em;
+            transition: background-color 300ms;
         }
 
         margin-bottom: 1em;

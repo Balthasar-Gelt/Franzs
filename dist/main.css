@@ -682,12 +682,14 @@ form .radio_button_wrapper {
   flex-wrap: wrap;
 }
 form .radio_button_wrapper input {
+  cursor: pointer;
   width: 30%;
   margin: 0;
   border: none;
   height: 3.5em;
 }
 form .radio_button_wrapper label {
+  cursor: pointer;
   position: static;
   width: 70%;
   height: 5.5em;
@@ -699,6 +701,10 @@ form .radio_button_wrapper label {
   align-items: center;
   flex-wrap: wrap;
   padding: 0 1em;
+  transition: background-color 300ms;
+}
+form .radio_button_wrapper label:hover {
+  background-color: #e8e8e8;
 }
 
 header {
@@ -1200,6 +1206,18 @@ header h3 {
   font-weight: 500;
 }
 
+@media (min-width: 750px) {
+  .product_table_checkout li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .product_table_checkout li img {
+    width: 10%;
+    margin: 1em 0;
+  }
+}
 .checkout-final {
   text-align: center;
 }
