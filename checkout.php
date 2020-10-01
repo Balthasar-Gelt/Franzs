@@ -139,7 +139,7 @@ $user = Sentinel::getUser();
 
             <h2 class="form_header">Shipping options</h2>
 
-            <div class="display_flex form_row">
+            <div class="radio_button_section form_row">
                 <div class="form_input grey_border radio_button_wrapper small_input display_flex">
                     <input required type="radio" id="form_delivery_standard" name="form_delivery" value="standard" checked>
                     <label value="<?php echo $defaultShipping; ?>" class="display_flex" for="form_delivery_standard">

@@ -2,6 +2,11 @@
 @import '../generals/variables';
 
 .product_table_checkout{
+
+    li{
+        font-weight: 300;
+    }
+
     opacity: 0;
     display: none;
     transition: opacity 300ms;
@@ -100,5 +105,43 @@
 
             @include flex;
         }
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .checkout_item_preview{
+        display: none;
+    }
+
+    #checkout_form{
+
+        .radio_button_section{
+            @include flexStart;
+        }
+
+        .radio_button_wrapper{
+            width: 49.5%;
+        }
+
+        width: 55%;
+        max-width: 35em;
+    }
+
+    .checkout_container{
+        @include flexStart;
+        flex-direction: row-reverse;
+    }
+
+    .product_table_checkout{
+
+        img{
+            width: 15% !important;
+        }
+
+        max-width: 28em;
+        width: 40%;
+        display: block !important;
+        opacity: 1;
     }
 }
