@@ -671,9 +671,9 @@ form h2 {
   margin-bottom: 1em;
 }
 form label {
-  font-size: 0.8em;
+  font-size: 0.7em;
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 5px;
   font-weight: 300;
   transition: opacity 300ms;
@@ -692,6 +692,8 @@ form .form_input {
   position: relative;
 }
 form input {
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
   padding-left: 0.5em;
   margin-bottom: 1.5em;
   height: 4em;
@@ -713,15 +715,16 @@ form .radio_button_wrapper {
 }
 form .radio_button_wrapper input {
   cursor: pointer;
-  width: 30%;
+  width: 20%;
   margin: 0;
   border: none;
   height: 3.5em;
 }
 form .radio_button_wrapper label {
+  font-size: 0.8em;
   cursor: pointer;
   position: static;
-  width: 70%;
+  width: 80%;
   height: 5.5em;
   vertical-align: middle;
   text-align: center;
@@ -990,7 +993,7 @@ header h3 {
 
   .side_content {
     width: 30%;
-    visibility: visible;
+    visibility: visible !important;
     position: static;
     opacity: 1;
     transform: translate(0, 0);
@@ -1167,6 +1170,9 @@ header h3 {
   display: none;
   transition: opacity 300ms;
 }
+.product_table_checkout li {
+  font-weight: 300;
+}
 
 .page_header {
   font-weight: 500;
@@ -1258,6 +1264,43 @@ header h3 {
   .product_table_checkout li img {
     width: 10%;
     margin: 1em 0;
+  }
+}
+@media (min-width: 1000px) {
+  .checkout_item_preview {
+    display: none;
+  }
+
+  #checkout_form {
+    width: 55%;
+    max-width: 35em;
+  }
+  #checkout_form .radio_button_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #checkout_form .radio_button_wrapper {
+    width: 49.5%;
+  }
+
+  .checkout_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+
+  .product_table_checkout {
+    max-width: 28em;
+    width: 40%;
+    display: block !important;
+    opacity: 1;
+  }
+  .product_table_checkout img {
+    width: 15% !important;
   }
 }
 .checkout-final {
