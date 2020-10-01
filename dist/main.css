@@ -372,6 +372,10 @@ p {
   transform: translateX(0) !important;
 }
 
+.fade_out {
+  opacity: 0;
+}
+
 nav {
   background-color: whitesmoke;
   display: flex;
@@ -1051,6 +1055,7 @@ header h3 {
   border-bottom: 1px solid #e6e6e6;
   font-size: 1.5em;
   line-height: 1.5em;
+  transition: opacity 300ms;
 }
 #cart_content .product:last-child {
   border-bottom: none !important;
@@ -1071,7 +1076,7 @@ header h3 {
 #cart_content .empty_cart {
   font-size: 1.5em;
   text-align: left;
-  padding: 1em 0.5em;
+  padding: 2em 0.5em;
 }
 
 .cart_total {
@@ -1273,6 +1278,10 @@ header a {
 
 form button {
   border: none;
+}
+
+.disabled_button {
+  background-color: grey !important;
 }
 
 .dashboard_section {

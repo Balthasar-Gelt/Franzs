@@ -39,6 +39,7 @@
         border-bottom: 1px solid $primaryColor;
         font-size: 1.5em;
         line-height: 1.5em;
+        transition: opacity 300ms;
     }
 
     .remove_product_wrapper{
@@ -61,8 +62,7 @@
     .empty_cart{
         font-size: 1.5em;
         text-align: left;
-        padding: 1em .5em;
-
+        padding: 2em .5em;
     }
 
     margin-bottom: 2em;
