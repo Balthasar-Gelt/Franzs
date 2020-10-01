@@ -1227,11 +1227,15 @@ header h3 {
   line-height: 1.3em;
   margin-bottom: 0.5em;
 }
+.checkout-final h1 {
+  margin-top: 1em;
+}
 .checkout-final h2 {
   font-size: 1.5em;
 }
 
 form button, #checkout_link, header a, .product_button {
+  cursor: pointer;
   font-size: 0.85em;
   display: inline-block;
   padding: 1em 2em;
@@ -1338,6 +1342,7 @@ form button {
   background-color: whitesmoke;
 }
 .dashboard_arrow_container .arrow_container_overlay {
+  cursor: pointer;
   width: 100%;
   z-index: 2;
   height: inherit;
@@ -1347,10 +1352,10 @@ form button {
   transition: background-color 300ms;
 }
 .dashboard_arrow_container .arrow_container_overlay:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .dashboard_arrow_container .arrow_container_overlay:active {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .dashboard_arrow_container img {
   height: 75%;
@@ -1362,6 +1367,59 @@ form button {
   overflow-y: hidden;
   max-height: 0px;
   transition: max-height 300ms;
+}
+
+@media (min-width: 750px) {
+  .pending_order_list_row {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .pending_order_list_row ul {
+    padding: 0.5em;
+    width: 49%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  .pending_order_list_row ul .dashboard_product {
+    display: block;
+  }
+  .pending_order_list_row ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .pending_order_list_row ul li img {
+    width: 30%;
+    padding: 0.5em 0;
+  }
+
+  .order_history_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 0.5em;
+  }
+  .order_history_list li {
+    border-bottom: none;
+    width: 50%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .order_history_list li:nth-child(odd) {
+    padding-right: 0.5em;
+    border-right: 1px solid #e6e6e6;
+  }
+  .order_history_list li:nth-child(even) {
+    padding-left: 0.5em;
+  }
+
+  .dashboard_arrow_container {
+    height: 3em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map*/
