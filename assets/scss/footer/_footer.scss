@@ -33,3 +33,27 @@ footer{
     padding-top: 4em;
     padding-bottom: 7em;
 }
+
+@media (min-width: 1000px) {
+
+    footer{
+
+        .footer_links{
+
+            li{
+                width: 100%;
+            }
+
+            display: block;
+        }
+
+        ul{
+
+            li{
+                width: 30%;
+            }
+
+            @include flexStart;
+        }
+    }
+}

@@ -649,6 +649,23 @@ footer .footer_links li:last-child {
   margin-bottom: 0;
 }
 
+@media (min-width: 1000px) {
+  footer .footer_links {
+    display: block;
+  }
+  footer .footer_links li {
+    width: 100%;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  footer ul li {
+    width: 30%;
+  }
+}
 form h2 {
   font-weight: 400;
   margin-bottom: 1em;
