@@ -404,6 +404,20 @@ nav img:active {
   transform: scale(0.9);
 }
 
+@media (min-width: 750px) {
+  nav img {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    margin-right: 1.5em;
+  }
+}
 #search_bar {
   border-top: 1px solid #e6e6e6;
   max-width: 35em;

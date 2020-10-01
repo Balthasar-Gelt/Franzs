@@ -39,3 +39,21 @@ nav{
     margin-bottom: 3em;
 }
 
+@media (min-width: 750px) {
+
+    nav{
+
+        img{
+            display: none;
+        }
+
+        ul{
+
+            li{
+                margin-right: 1.5em;
+            }
+
+            @include flex;
+        }
+    }
+}
