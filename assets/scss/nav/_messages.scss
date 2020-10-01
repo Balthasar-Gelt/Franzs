@@ -18,15 +18,15 @@
 
 #good_message{
     border-color: $goodColor;
-    min-width: 60%;
+    min-width: 20em;
 }
 
 #warning_message{
     border-color: $warningColor;
-    width: 100%;
+    min-width: 25em;
 }
 
 #error_message{
     border-color: $errorColor;
-    width: 100%;
+    min-width: 25em;
 }

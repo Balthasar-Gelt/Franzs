@@ -502,17 +502,17 @@ nav img:active {
 
 #good_message {
   border-color: #8bb911;
-  min-width: 60%;
+  min-width: 20em;
 }
 
 #warning_message {
   border-color: #fe9600;
-  width: 100%;
+  min-width: 25em;
 }
 
 #error_message {
   border-color: #fe4236;
-  width: 100%;
+  min-width: 25em;
 }
 
 .menu_overlay {
