@@ -593,6 +593,11 @@ nav img:active {
   margin-bottom: 1em;
 }
 
+@media (min-width: 750px) {
+  .form_wrapper {
+    padding: 1.5em 2em;
+  }
+}
 .overlay {
   visibility: hidden;
   opacity: 0;
