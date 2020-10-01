@@ -31,17 +31,19 @@
         transition: transform 300ms;
     }
 
+    max-width: 25em;
+
     opacity: 0;
     visibility: hidden;
     width: 100%;
     position: fixed;
-    top: 10%;
-    left: 0;
-    transform: translateY(30%);
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 1em;
     background-color: white;
     z-index: 10;
-    transition: transform 300ms, opacity 300ms;
+    transition: top 300ms, opacity 300ms;
 }
 
 .form_img_wrapper{

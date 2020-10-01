@@ -364,7 +364,7 @@ p {
 
 .slide_up {
   opacity: 1 !important;
-  transform: translateY(0%) !important;
+  top: 10% !important;
 }
 
 .slide_in {
@@ -384,6 +384,10 @@ nav {
 }
 nav ul {
   display: none;
+  font-weight: 300;
+}
+nav ul li {
+  margin-right: 2em;
 }
 nav h1 a {
   color: black;
@@ -402,9 +406,12 @@ nav img:active {
 
 #search_bar {
   border-top: 1px solid #e6e6e6;
+  max-width: 35em;
   width: 100%;
   position: fixed;
   top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   visibility: hidden;
   background-color: white;
   z-index: 8;
@@ -523,25 +530,27 @@ nav img:active {
   color: white;
 }
 .menu_overlay ul {
+  position: relative;
   text-align: center;
   line-height: 2em;
   font-size: 1.75em;
-  transform: translateY(40%);
-  transition: transform 300ms;
+  top: 30%;
+  transition: top 300ms;
 }
 
 .form_wrapper {
+  max-width: 25em;
   opacity: 0;
   visibility: hidden;
   width: 100%;
   position: fixed;
-  top: 10%;
-  left: 0;
-  transform: translateY(30%);
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 1em;
   background-color: white;
   z-index: 10;
-  transition: transform 300ms, opacity 300ms;
+  transition: top 300ms, opacity 300ms;
 }
 .form_wrapper button {
   margin: 0;
@@ -754,6 +763,7 @@ header h3 {
   text-align: center;
 }
 .one_product_row img {
+  max-width: 20em;
   width: 70%;
 }
 .one_product_row aside {
@@ -773,6 +783,7 @@ header h3 {
 }
 
 .side_content {
+  max-width: 25em;
   width: 80%;
   visibility: hidden;
   position: fixed;
@@ -797,10 +808,10 @@ header h3 {
   margin-bottom: 0;
 }
 .side_content .side_content_cell li {
-  margin-bottom: 0.35em;
+  margin-bottom: 0.5em;
 }
 .side_content h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
   font-weight: 400;
 }
 
@@ -870,6 +881,7 @@ header h3 {
   border: 1px solid #e6e6e6;
   padding: 1em;
   width: 85%;
+  max-width: 30em;
   height: auto;
 }
 
@@ -921,6 +933,7 @@ header h3 {
 #cart_content img {
   padding: 1em;
   width: 75%;
+  max-width: 10em;
 }
 #cart_content .product {
   padding: 0.5em;
@@ -964,7 +977,9 @@ header h3 {
 }
 
 .product_table_checkout {
+  opacity: 0;
   display: none;
+  transition: opacity 300ms;
 }
 
 .page_header {
@@ -1015,6 +1030,7 @@ header h3 {
 }
 .product_table_checkout img {
   width: 60%;
+  max-width: 10em;
   margin: 1em auto;
   display: block;
 }

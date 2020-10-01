@@ -27,11 +27,13 @@
     }
 
     ul{
+
+        position: relative;
         text-align: center;
         line-height: 2em;
         font-size: 1.75em;
-        transform: translateY(40%);
-        transition: transform 300ms;
+        top: 30%;
+        transition: top 300ms;
     }
 
     display: none;

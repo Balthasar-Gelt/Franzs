@@ -6,7 +6,13 @@ nav{
     @include flex();
 
     ul{
+
+        li{
+            margin-right: 2em;
+        }
+
         display: none;
+        font-weight: 300;
     }
 
     h1 a{
