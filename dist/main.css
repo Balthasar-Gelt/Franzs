@@ -1007,6 +1007,17 @@ header h3 {
   color: #8c92a0;
 }
 
+@media (min-width: 750px) {
+  .product_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .product_section aside {
+    width: 49%;
+  }
+}
 .cart_header {
   font-weight: 500;
   font-size: 1.15em;

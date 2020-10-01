@@ -40,3 +40,15 @@
 .Reserved{
     color: $secondaryTextColor;
 }
+
+@media (min-width: 750px) {
+
+    .product_section{
+
+        aside{
+            width: 49%;
+        }
+
+        @include flexStart;
+    }
+}
