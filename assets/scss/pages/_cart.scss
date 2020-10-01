@@ -77,8 +77,65 @@
 
     h1{
         font-size: 1em;
+        font-weight: 400;
     }
 
+    font-weight: 400;
     line-height: 2em;
     font-size: 1.5em;
+}
+
+@media (min-width: 750px) {
+
+    #cart{
+        
+        .cart_wide_width{
+            width: 40%;
+            @include flex;
+        }
+
+        .cart_narrow_width{
+            width: 20%;
+        }
+
+        .cart_header{
+
+            .cart_wide_width{
+                display: block;
+    
+            }
+        
+            .cart_narrow_width{
+                display: block;
+            }
+            
+            @include flex;
+        }
+    }
+
+    #cart_content{
+
+        .product{
+        
+  
+    
+            img{
+                width: 43%;
+            }
+    
+            .remove_product_wrapper{
+    
+                img{
+                    width: 25%;
+                }
+                
+                transform: scale(1);
+                position: static;
+            }
+    
+            @include flex;
+            font-weight: 300;
+            font-size: 1.2em;
+        }
+    }
 }
