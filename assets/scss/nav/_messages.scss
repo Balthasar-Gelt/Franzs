@@ -18,15 +18,26 @@
 
 #good_message{
     border-color: $goodColor;
-    min-width: 20em;
+    min-width: 15em;
 }
 
 #warning_message{
     border-color: $warningColor;
-    min-width: 25em;
+    min-width: 19em;
 }
 
 #error_message{
     border-color: $errorColor;
-    min-width: 25em;
+    min-width: 19em;
+}
+
+@media (min-width: 750px) {
+
+    #good_message{
+        min-width: 20em;
+    }
+
+    #warning_message, #error_message{
+        min-width: 25em;
+    }
 }
