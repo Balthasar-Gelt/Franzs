@@ -2,7 +2,9 @@
 @import '../generals/variables';
 
 .product_table_checkout{
+    opacity: 0;
     display: none;
+    transition: opacity 300ms;
 }
 
 .page_header{
