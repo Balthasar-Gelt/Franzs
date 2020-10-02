@@ -64,26 +64,24 @@ $cartItems = getProducts($db, $cart->getCartItems(), ['Status', 'filename', 'Nam
     ?>
     </div>
 
-    <div class="cart_bottom_wrapper">
-        <div class="cart_total">
-            <h1>CART TOTAL:</h1>
-            <span><?php echo $cart->getCartTotal();?> €</span>
-        </div>
-        
-        <a id="checkout_link"
-             <?php
-                if($canCheckOut){
-                    echo 'href="checkout.php"';
-                }
-                
-                else{
-                    echo 'class="disabled_button"';
-                    echo 'disabled ';
-                    echo 'href="#"';
-                }
-            ?>
-        >PROCEED TO CHECKOUT</a>
+    <div class="cart_total">
+        <h1>CART TOTAL:</h1>
+        <span><?php echo $cart->getCartTotal();?> €</span>
     </div>
+    
+    <a id="checkout_link"
+            <?php
+            if($canCheckOut){
+                echo 'href="checkout.php"';
+            }
+            
+            else{
+                echo 'class="disabled_button"';
+                echo 'disabled ';
+                echo 'href="#"';
+            }
+        ?>
+    >PROCEED TO CHECKOUT</a>
 </div>
 
 <?php include 'partials/footer.php'; ?>
