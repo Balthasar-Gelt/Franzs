@@ -117,16 +117,16 @@
 
         .product{
         
-  
-    
             img{
                 width: 43%;
+                max-width: 8em;
             }
     
             .remove_product_wrapper{
     
                 img{
                     width: 25%;
+                    max-width: 2em;
                 }
                 
                 transform: scale(1);
