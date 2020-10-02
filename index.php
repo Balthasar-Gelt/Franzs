@@ -17,7 +17,7 @@ $indexPage = new IndexPage(new DB($dbConfig));
                 <h1><?php echo $indexPage->getProperty('title'); ?></h1>
                 <h2><?php echo $indexPage->getProperty('subTitle'); ?></h2>
                 <h3>Browse Our Collection</h3>
-                <a class="header_button" href="shop.php">SHOP NOW</a>
+                <a href="shop.php">SHOP NOW</a>
             </div>
         
             <img src= <?php echo addImage($indexPage->getProperty('titlePictureName')); ?> alt="123">
@@ -51,9 +51,9 @@ $indexPage = new IndexPage(new DB($dbConfig));
 
         <section class="one_product_row container">
 
-            <aside class="center_text">
+            <aside>
                 <h1> <?php echo $indexPage->getProperty('bottomRowTitle'); ?> </h1>
-                <a class="secondary_button" href="shop.php">SHOP NOW</a>
+                <a href="shop.php">SHOP NOW</a>
             </aside>
 
             <img src= <?php echo addImage($indexPage->getProperty('bottomRowImageName')); ?> alt="clock">
