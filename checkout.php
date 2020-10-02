@@ -42,7 +42,7 @@ $user = Sentinel::getUser();
 
     <div class="checkout_item_preview">Preview Cart Items</div>
 
-    <div class="checkout_container row_reverse align_items_start ">
+    <div class="checkout_container">
 
         <div class="product_table_checkout">
             <ul>
@@ -54,8 +54,8 @@ $user = Sentinel::getUser();
     
                         echo "<li>
                         <img src=".addImage($item->filename)." alt='hey, Vsauce, image here'>
-                        <span class='checkout_item_name'>".$item->Name."</span>
-                        <span class='checkout_item_price'>".$item->Price." $</span>
+                        <span>".$item->Name."</span>
+                        <span>".$item->Price." $</span>
                         </li>";
                         }
                     }
