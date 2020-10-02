@@ -20,9 +20,9 @@ include 'partials/header.php';
             </aside>
 
             <aside class="product_page_text_wrapper">
-                <h1 class="heading_medium"><?php echo $product->Name; ?></h1>
+                <h1><?php echo $product->Name; ?></h1>
                 
-                <P class="text"><?php echo $product->Description; ?></P>
+                <P><?php echo $product->Description; ?></P>
                 
                 <span class="price"><?php echo $product->Price; ?> $</span>
 
