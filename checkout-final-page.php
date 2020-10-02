@@ -27,7 +27,7 @@ include 'partials/header.php';
         switch ($_GET['message']) {
 
             case 'input':
-                echo '<div class="checkout_text_block">';
+                echo '<div>';
                 echo '<img src="assets/other/icons8-cancel.svg" alt="hey, Vsauce, Image here">';
                 echo '<h1>Something went wrong!</h1>';
                 echo '<h2>Some of the information you have provided are wrong. Try placing your order again.</h2>';
@@ -35,7 +35,7 @@ include 'partials/header.php';
                 break;
 
             case 'cartContent':
-                echo '<div class="checkout_text_block">';
+                echo '<div>';
                 echo    '<img src="assets/other/icons8-cancel.svg" alt="hey, Vsauce, Image here">';
                 echo    '<h1>Something went wrong!</h1>';
                 echo    '<h2>We are sorry, but one or more items you tried to order have already been reserved.</h2>';
@@ -43,7 +43,7 @@ include 'partials/header.php';
                 break;
 
             case 'dbInsert':
-                echo '<div class="checkout_text_block">';
+                echo '<div>';
                 echo '<img src="assets/other/icons8-cancel.svg" alt="hey, Vsauce, Image here">';
                 echo '<h1>Something went wrong!</h1>';
                 echo '<h2>Please try placing your order again.</h2>';
