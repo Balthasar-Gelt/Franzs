@@ -20,16 +20,16 @@ $products = $db->fetchRows('SELECT Price,id,filename,Name,Status,Price FROM PROD
                     <h1>CATEGORIES</h1>
 
                     <ul>
-                        <li> <a class="blue_link" href="">Shoes</a> <span>(509)</span> </li>
-                        <li><a class="blue_link" href="">Belts</a> <span>(509)</span> </li>
-                        <li><a class="blue_link" href="">Beards</a> <span>(509)</span> </li>
+                        <li><a href="">Shoes</a> <span>(509)</span></li>
+                        <li><a href="">Belts</a> <span>(509)</span></li>
+                        <li><a href="">Beards</a> <span>(509)</span></li>
                     </ul>
                 </li>
 
                 <li class="side_content_cell">
                     <h1>FILTER BY PRICE</h1>
                     
-                    <div class="small_margin_bottom">
+                    <div>
                         <span id="slider-snap-value-lower">0</span>
                         <span>-</span>
                         <span id="slider-snap-value-upper">1000</span>
@@ -37,7 +37,7 @@ $products = $db->fetchRows('SELECT Price,id,filename,Name,Status,Price FROM PROD
 
                     <div class="slider"></div>
 
-                    <a id="filter_button" class="product_button blue_flat_button" href="#">FILTER</a>
+                    <a id="filter_button" href="#">FILTER</a>
 
                     </li>
                 </ul>
