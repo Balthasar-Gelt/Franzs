@@ -1366,9 +1366,18 @@ form button {
 }
 
 .dashboard_section {
+  padding: 2em;
+  border: 1px solid #e6e6e6;
   line-height: 1.5em;
   margin-bottom: 3em;
   text-align: center;
+}
+.dashboard_section .pending_order_list {
+  padding: 1em 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.dashboard_section .pending_order_list:first-of-type {
+  padding-top: 0;
 }
 .dashboard_section form {
   text-align: left;
@@ -1440,7 +1449,7 @@ form button {
 .dashboard_arrow_container {
   height: 2.5em;
   position: relative;
-  background-color: whitesmoke;
+  background-color: #e6e6e6;
 }
 .dashboard_arrow_container .arrow_container_overlay {
   cursor: pointer;
@@ -1456,7 +1465,7 @@ form button {
   background-color: rgba(0, 0, 0, 0.05);
 }
 .dashboard_arrow_container .arrow_container_overlay:active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 .dashboard_arrow_container img {
   height: 75%;
@@ -1471,6 +1480,14 @@ form button {
 }
 
 @media (min-width: 750px) {
+  .dashboard_section .pending_order_list {
+    padding: 1em;
+    border-bottom: none;
+  }
+  .dashboard_section .pending_order_list:first-of-type {
+    padding-top: 1em;
+  }
+
   .pending_order_list_row {
     padding: 0.5em;
     display: flex;
@@ -1520,6 +1537,25 @@ form button {
 
   .dashboard_arrow_container {
     height: 3em;
+  }
+}
+@media (min-width: 1000px) {
+  .order_history_list li {
+    border-right: none !important;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+    padding: 0.5em 0em !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .order_history_list li h2, .order_history_list li span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 32%;
   }
 }
 

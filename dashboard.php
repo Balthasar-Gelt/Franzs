@@ -109,11 +109,9 @@ include 'partials/header.php';
                     echo '
                     <li>
 
-                        <div class="display_flex">
-                            <h2 class="display_flex"><strong>Order Number</strong> '. $order->id .'</h2>
-                            <span class="display_flex"><strong>Order total</strong> '. $order->orderTotal .' $</span>
-                            <span class="display_flex"><strong>Order delivered</strong>'. formatDate($order->deliveryDate) .'</span>
-                        </div>
+                        <h2 class="display_flex"><strong>Order Number</strong> '. $order->id .'</h2>
+                        <span class="display_flex"><strong>Order total</strong> '. $order->orderTotal .' $</span>
+                        <span class="display_flex"><strong>Order delivered</strong>'. formatDate($order->deliveryDate) .'</span>
 
                     </li>';
                 }

@@ -1,5 +1,15 @@
 .dashboard_section{
 
+    .pending_order_list{
+
+        &:first-of-type{
+            padding-top: 0;
+        }
+
+        padding: 1em 0;
+        border-bottom: 1px solid $primaryColor;
+    }
+
     form{
         text-align: left;
         line-height: 1em;
@@ -41,6 +51,8 @@
         }
     }
 
+    padding: 2em;
+    border: 1px solid $primaryColor;
     line-height: 1.5em;
     margin-bottom: 3em;
     text-align: center;
@@ -88,7 +100,7 @@
         }
 
         &:active{
-            background-color: rgba(0, 0, 0, 0.100);
+            background-color: rgba(255, 255, 255, 0.08);
         }
 
         cursor: pointer;
@@ -110,7 +122,7 @@
 
     height: 2.5em;
     position: relative;
-    background-color: $lighterPrimary;
+    background-color: $primaryColor;
 }
 
 .dashboard_section_content_wrapper{
@@ -120,6 +132,22 @@
 }
 
 @media (min-width: 750px) {
+
+
+    .dashboard_section{
+
+        .pending_order_list{
+
+            &:first-of-type{
+                padding-top: 1em;
+            }
+
+            padding: 1em;
+            border-bottom: none;
+        }
+    }
+
+
 
     .pending_order_list_row{
 
@@ -177,7 +205,23 @@
     }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
 
-    
+    .order_history_list{
+
+        li{
+
+            h2, span{
+                @include flex;
+                width: 32%;
+            }
+
+            border-right: none !important;
+            border-bottom: 1px solid $primaryColor;
+            width: 100%;
+            padding: .5em 0em !important;
+            @include flex;
+        }
+    }
+
 }
