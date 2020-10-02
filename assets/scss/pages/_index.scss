@@ -165,3 +165,43 @@ header {
         }
     }
 }
+
+@media (min-width: 1000px) {
+
+    header{
+
+        .header_main{
+            justify-content: space-between;
+        }
+
+        .header_title{
+            font-size: 1.438em;
+        }
+
+        img{
+            width: 45%;
+        }
+    }
+
+    .one_product_row{
+
+        img{
+            width: 45%;
+        }
+
+        .center_text{
+
+            h1{
+                font-size: 3.750em;
+            }
+    
+            a{
+                font-size: 1.094em;
+            }
+
+            font-size: 1em;
+        }
+        
+        justify-content: space-between;
+    }
+}
