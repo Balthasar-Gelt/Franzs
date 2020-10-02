@@ -20,10 +20,8 @@ foreach ($products as $product) {
     $productElement = "<li>
                     <a class='display_flex searched_item_link' href='product-page.php?id=".$product->id."'>
                         <img src=".addImage($product->filename)." alt='Hey, Vsauce, image here'>
-                        <div class='searched_item_text'>
-                            <h1>".$product->Name."</h1>
-                            <span class='searched_item_status'>".$product->Status."</span>
-                        </div>
+                        <h1>".$product->Name."</h1>
+                        <span class='searched_item_status'>".$product->Status."</span>
                         <span class='searched_item_price'>".$product->Price."€</span>
                     </a>
                    </li>";

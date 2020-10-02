@@ -423,8 +423,8 @@ nav img:active {
   }
 }
 #search_bar {
-  border-top: 1px solid #e6e6e6;
-  max-width: 35em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  max-width: 55em;
   width: 100%;
   position: fixed;
   top: 10%;
@@ -441,10 +441,14 @@ nav img:active {
   flex-wrap: wrap;
 }
 #search_bar input {
+  font-size: 1.1em;
   border: none;
   width: 70%;
   height: 35px;
   padding-left: 0.5em;
+}
+#search_bar input:focus {
+  outline: none;
 }
 
 #close_search {
@@ -457,9 +461,11 @@ nav img:active {
   padding: 0.5em;
   transition: background-color 300ms;
 }
-
 #close_search:hover {
   background-color: #076eff;
+}
+#close_search:active {
+  background-color: #0062ec;
 }
 
 .products_search_container {
@@ -484,6 +490,51 @@ nav img:active {
   margin-bottom: 0.5em;
 }
 
+@media (min-width: 1000px) {
+  #search_bar .products_search_container {
+    max-height: 0px;
+    position: absolute;
+    width: 85%;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 1;
+  }
+  #search_bar .searched_item_link {
+    color: black;
+    font-size: 1.3em;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+  #search_bar .searched_item_link img {
+    width: 15%;
+  }
+  #search_bar .searched_item_link h1 {
+    width: 30%;
+    margin: 0;
+    margin-left: 5%;
+    font-size: 1.1em;
+  }
+  #search_bar .searched_item_link span {
+    width: 25%;
+  }
+  #search_bar .searched_item_link .searched_item_status {
+    color: #5a5f6c;
+  }
+  #search_bar input {
+    height: 51px;
+    width: 85%;
+    z-index: 2;
+  }
+
+  #close_search {
+    width: 15%;
+    padding: 1em 0;
+  }
+}
 .message_container {
   visibility: hidden;
   position: fixed;

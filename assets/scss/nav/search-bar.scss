@@ -8,14 +8,19 @@
     }
 
     input{
+        font-size: 1.1em;
         border: none;
         width: 70%;
         height: 35px;
         padding-left: .5em;
+
+        &:focus{
+            outline: none;
+        }
     }
 
-    border-top: 1px solid $primaryColor;
-    max-width: 35em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    max-width: 55em;
     width: 100%;
     position: fixed;
     top: 10%;
@@ -29,6 +34,15 @@
 
 
 #close_search{
+
+    &:hover{
+        background-color: darken($color: $buttonBackground, $amount: 5%);
+    }
+
+    &:active{
+        background-color: darken($color: $buttonBackground, $amount: 10%);
+    }
+
     cursor: pointer;
     display: block;
     width: 30%;
@@ -37,10 +51,6 @@
     color: white;
     padding: .5em;
     transition: background-color 300ms;
-}
-
-#close_search:hover{
-    background-color: darken($color: $buttonBackground, $amount: 5%);
 }
 
 .products_search_container{
@@ -68,4 +78,58 @@
 
     line-height: 1.5em;
     text-align: center;
+}
+
+@media (min-width: 1000px) {
+
+    #search_bar{
+
+        .products_search_container{
+            max-height: 0px;
+            position: absolute;
+            width: 85%;
+            background-color: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            z-index: 1;
+        }
+
+        .searched_item_link{
+
+            img{
+                width: 15%;
+            }
+            
+            h1{
+                width: 30%;
+                margin: 0;
+                margin-left: 5%;
+                font-size: 1.1em;
+            }
+
+            span{
+                width: 25%;
+            }
+
+            .searched_item_status{
+                color: darken($color: $secondaryTextColor, $amount: 20%);
+            }
+
+            color: black;
+            font-size: 1.3em;
+            font-weight: 300;
+            @include flex;
+            flex-wrap: nowrap;
+        }
+    
+        input{
+            height: 51px;
+            width: 85%;
+            z-index: 2;
+        }
+    }
+
+    #close_search{
+        width: 15%;
+        padding: 1em 0;
+    }
 }

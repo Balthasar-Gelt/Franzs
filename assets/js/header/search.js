@@ -1,4 +1,4 @@
-let searchLinks, searchBar, closeSearchButton, searchField, listOfSearchedProducts, url;
+let searchLinks, searchBar, closeSearchButton, searchField, listOfSearchedProducts, url, containerOfSearchedProducts;
 
 export function initializeSearch(){
 
@@ -8,14 +8,21 @@ export function initializeSearch(){
     searchBar = document.querySelector("#search_bar");
     closeSearchButton = document.querySelector("#close_search");
     searchField = document.querySelector("#search_field");
+    containerOfSearchedProducts = document.querySelector(".products_search_container");
     listOfSearchedProducts = document.querySelector(".products_search_container ul");
 
     for (const link of searchLinks) {
         link.addEventListener('click', e => toggleSearchBar(e));
     }
 
-    closeSearchButton.addEventListener('click', () => searchBar.style.visibility = "hidden");
+    closeSearchButton.addEventListener('click', closeSearchBar);
     searchField.addEventListener('keyup', e => searchFetch(e));
+}
+
+function closeSearchBar(){
+
+    searchBar.style.visibility = "hidden";
+    containerOfSearchedProducts.style.maxHeight = "0px";
 }
 
 function toggleSearchBar(e){
@@ -27,8 +34,7 @@ function toggleSearchBar(e){
         searchField.focus();
     }
     else{
-        searchBar.style.visibility = "hidden";
-        searchField.blur();
+        closeSearchBar();
     }
 
     searchField.value = "";
@@ -47,7 +53,7 @@ function searchFetch(e){
         return response.text();
         })
         .then(function (response) {
-
+        containerOfSearchedProducts.style.maxHeight = "none";
         listOfSearchedProducts.innerHTML = response;
         });
     }
