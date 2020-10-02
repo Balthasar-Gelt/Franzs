@@ -715,8 +715,8 @@ form .radio_button_wrapper {
 }
 form .radio_button_wrapper input {
   cursor: pointer;
-  width: 20%;
-  margin: 0;
+  width: 10%;
+  margin: auto;
   border: none;
   height: 3.5em;
 }
@@ -1214,7 +1214,10 @@ header h3 {
 
 .card_fields_wrapper {
   border: 1px solid #e6e6e6;
-  padding: 1em 0.5em 0 0.5em;
+  padding: 2em;
+}
+.card_fields_wrapper #form_card_security_code {
+  margin-bottom: 0;
 }
 
 .product_table_checkout {
@@ -1235,8 +1238,8 @@ header h3 {
 }
 
 .checkout_price_wrapper {
-  padding-top: 1em;
-  border-bottom: 1px solid black;
+  padding: 1em 0;
+  border-bottom: 1px solid #cdcdcd;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1260,6 +1263,7 @@ header h3 {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    flex-wrap: unset;
   }
   .product_table_checkout li img {
     width: 10%;
@@ -1294,13 +1298,21 @@ header h3 {
   }
 
   .product_table_checkout {
-    max-width: 28em;
-    width: 40%;
+    border-left: 1px solid #e6e6e6;
+    padding-left: 1.5em;
+    max-width: 26em;
+    width: 35%;
     display: block !important;
     opacity: 1;
   }
   .product_table_checkout img {
     width: 15% !important;
+  }
+  .product_table_checkout span {
+    margin-bottom: 0;
+  }
+  .product_table_checkout li {
+    padding: 0.5em 0;
   }
 }
 .checkout-final {
