@@ -16,12 +16,17 @@ require_once 'nav-menu.php';
 </head>
 
 <body>
-    <nav class="display_flex container">
-        <h1><a href="index.php">Franzs</a></h1>
 
-        <?php printNavMenu(); ?>
+    <nav>
 
-        <img class="menu_icon" src="<?php echo 'http://'. $_SERVER['SERVER_NAME'] .':'. $_SERVER['SERVER_PORT'] .'/Dealers/' . '/assets/other/menu.svg'; ?>" alt="Hey, Vsauce, image here">
+        <div class="container nav_container">        
+            <h1><a href="index.php">Franzs</a></h1>
+
+            <?php printNavMenu(); ?>
+
+            <img class="menu_icon" src="<?php echo 'http://'. $_SERVER['SERVER_NAME'] .':'. $_SERVER['SERVER_PORT'] .'/Dealers/' . '/assets/other/menu.svg'; ?>" alt="Hey, Vsauce, image here">
+        </div>
+
     </nav>
 
 <?php
