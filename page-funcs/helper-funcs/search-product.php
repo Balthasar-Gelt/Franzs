@@ -18,7 +18,7 @@ $products = $db->fetchRows("SELECT id,Name,filename,Price,Status FROM PRODUCTS W
 foreach ($products as $product) {
     
     $productElement = "<li>
-                    <a class='display_flex searched_item_link' href='product-page.php?id=".$product->id."'>
+                    <a class='searched_item_link' href='product-page.php?id=".$product->id."'>
                         <img src=".addImage($product->filename)." alt='Hey, Vsauce, image here'>
                         <h1>".$product->Name."</h1>
                         <span class='searched_item_status'>".$product->Status."</span>

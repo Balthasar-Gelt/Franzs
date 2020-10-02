@@ -42,7 +42,7 @@ $user = Sentinel::getUser();
 
     <div class="checkout_item_preview">Preview Cart Items</div>
 
-    <div class="checkout_container row_reverse display_flex align_items_start ">
+    <div class="checkout_container row_reverse align_items_start ">
 
         <div class="product_table_checkout">
             <ul>
@@ -52,7 +52,7 @@ $user = Sentinel::getUser();
 
                         foreach ($cartItems as $item) {
     
-                        echo "<li class='display_flex'>
+                        echo "<li>
                         <img src=".addImage($item->filename)." alt='hey, Vsauce, image here'>
                         <span class='checkout_item_name'>".$item->Name."</span>
                         <span class='checkout_item_price'>".$item->Price." $</span>
@@ -62,17 +62,17 @@ $user = Sentinel::getUser();
                 ?>
             </ul>
 
-            <div class="checkout_price_wrapper display_flex">
+            <div class="checkout_price_wrapper">
                 <span>Subtotal</span>
                 <span><?php echo $cart->getCartTotal() ?> $</span>
             </div>
 
-            <div class="checkout_price_wrapper shipping display_flex">
+            <div class="checkout_price_wrapper shipping">
                 <span>Shipping</span>
                 <span id="product_table_shipping"><?php echo $defaultShipping; ?> $</span>
             </div>
 
-            <div class="checkout_total display_flex">
+            <div class="checkout_total">
                 <h3>Total</h3>
                 <span><?php echo $cart->getCartTotal($defaultShipping) ?> $</span>
             </div>
@@ -86,7 +86,7 @@ $user = Sentinel::getUser();
                 <span class="alert email_alert">Invalid input</span>
             </div>
 
-            <div class="form_row display_flex">
+            <div class="form_row">
                 <div class="form_input small_input">
                     <label for="form_first_name">First name</label>
                     <input value="<?php printValue($user, 'first_name'); ?>" required class="checkout_input" placeholder="First name" type="text" id="form_first_name" name="form_first_name">
@@ -117,7 +117,7 @@ $user = Sentinel::getUser();
                 <input value="<?php printValue($user, 'province'); ?>" class="checkout_input" placeholder="Province/State" type="text" id="form_province" name="form_province">
             </div>
 
-            <div class="form_row display_flex">
+            <div class="form_row">
                 <div class="form_input small_input">
                     <label for="form_country">Country</label>
                     <input value="<?php printValue($user, 'country'); ?>" required class="checkout_input" placeholder="Country" type="text" id="form_country" name="form_country">
@@ -140,17 +140,17 @@ $user = Sentinel::getUser();
             <h2 class="form_header">Shipping options</h2>
 
             <div class="radio_button_section form_row">
-                <div class="form_input grey_border radio_button_wrapper small_input display_flex">
+                <div class="form_input grey_border radio_button_wrapper small_input">
                     <input required type="radio" id="form_delivery_standard" name="form_delivery" value="standard" checked>
-                    <label value="<?php echo $defaultShipping; ?>" class="display_flex" for="form_delivery_standard">
+                    <label value="<?php echo $defaultShipping; ?>" for="form_delivery_standard">
                         <span>Standard delivery (5-7 days)</span>
                         <span><?php echo $defaultShipping; ?>€</span>
                     </label>
                 </div>
 
-                <div class="form_input grey_border radio_button_wrapper small_input display_flex">
+                <div class="form_input grey_border radio_button_wrapper small_input">
                     <input required type="radio" id="form_delivery_express" name="form_delivery" value="express">
-                    <label value="<?php echo $expressShipping; ?>" class="display_flex" for="form_delivery_express">
+                    <label value="<?php echo $expressShipping; ?>" for="form_delivery_express">
                         <span>Express delivery (1-3 days)</span>
                         <span><?php echo $expressShipping; ?>€</span>
                     </label>
@@ -161,7 +161,7 @@ $user = Sentinel::getUser();
 
                 <div class="credit_card_wrapper">
                     <span>Credit card</span>
-                    <ul class="credit_card_list display_flex">
+                    <ul class="credit_card_list">
                         <li>Visa</li>
                         <li>Master card</li>
                         <li>Amex</li>
@@ -181,7 +181,7 @@ $user = Sentinel::getUser();
                     <span class="alert card_name_alert">Invalid input</span>
                 </div>
 
-                <div class="form_row display_flex">
+                <div class="form_row">
                     <div class="form_input small_input">
                         <label for="form_card_expiration">Expiration date</label>
                         <input required class="checkout_input" placeholder="Expiration date (MM/YYYY)" type="text" id="form_card_expiration" name="form_card_expiration">

@@ -39,30 +39,30 @@ include 'partials/header.php';
     foreach ($pendingOrders->orders as $iterator => $order) {
 
         if(($iterator % 2) == 0){
-            echo '<div class="pending_order_list_row display_flex">';
+            echo '<div class="pending_order_list_row">';
         }
 
         echo '<ul class="pending_order_list">
-                <li class="display_flex order_number">
+                <li class="order_number">
                     <h2>Order Number</h2>
                     <span>' .$order->id. '</span>
                 </li>';
 
         foreach ($pendingOrders->products[$iterator] as $product) {
             
-            echo '<li class="display_flex dashboard_product">
+            echo '<li class="dashboard_product">
                     <img src="' .addImage($product->fileName). '" alt="">
                     <h3>'. $product->name .'</h3>
                     <span>'. $product->price .' $</span>
                 </li>';
         }
 
-        echo    '<li class="display_flex">
+        echo    '<li>
                     <h3>Delivery</h3>
                     <span>'. ($order->delivery == 'standard' ? 10 : 20) .' $</span>
                     </li>
 
-                <li class="display_flex">
+                <li>
                     <h3>Order total</h3>
                     <span>'. $order->orderTotal .' $</span>
                 </li>
@@ -109,9 +109,9 @@ include 'partials/header.php';
                     echo '
                     <li>
 
-                        <h2 class="display_flex"><strong>Order Number</strong> '. $order->id .'</h2>
-                        <span class="display_flex"><strong>Order total</strong> '. $order->orderTotal .' $</span>
-                        <span class="display_flex"><strong>Order delivered</strong>'. formatDate($order->deliveryDate) .'</span>
+                        <h2><strong>Order Number</strong> '. $order->id .'</h2>
+                        <span><strong>Order total</strong> '. $order->orderTotal .' $</span>
+                        <span><strong>Order delivered</strong>'. formatDate($order->deliveryDate) .'</span>
 
                     </li>';
                 }
@@ -144,7 +144,7 @@ include 'partials/header.php';
                 <span class="alert email_alert">Invalid input</span>
             </div>
 
-            <div class="form_row display_flex">
+            <div class="form_row">
                 <div class="form_input small_input">
                     <label for="form_first_name">First name</label>
                     <input value="<?php echo $user->first_name; ?>" required class="checkout_input" placeholder="First name" type="text" id="form_first_name" name="form_first_name">
@@ -171,7 +171,7 @@ include 'partials/header.php';
                 <input value="<?php echo $user->province; ?>" class="checkout_input" placeholder="Province/State" type="text" id="form_province" name="form_province">
             </div>
 
-            <div class="form_row display_flex">
+            <div class="form_row">
                 <div class="form_input small_input">
                     <label for="form_country">Country</label>
                     <input value="<?php echo $user->country; ?>" required class="checkout_input" placeholder="Country" type="text" id="form_country" name="form_country">

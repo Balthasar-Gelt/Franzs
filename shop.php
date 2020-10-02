@@ -10,7 +10,7 @@ $db = new DB($dbConfig);
 $products = $db->fetchRows('SELECT Price,id,filename,Name,Status,Price FROM PRODUCTS');
 ?>
 
-    <div class="container display_flex shop_container row_reverse align_items_start main_padding">
+    <div class="container shop_container row_reverse align_items_start main_padding">
 
         <div id="aside_overlay"></div>
         <img id="aside_button" src="assets/other/<.svg" alt="Hey, Vsauce, image here">
@@ -20,9 +20,9 @@ $products = $db->fetchRows('SELECT Price,id,filename,Name,Status,Price FROM PROD
                     <h1>CATEGORIES</h1>
 
                     <ul>
-                        <li class="display_flex"> <a class="blue_link" href="">Shoes</a> <span>(509)</span> </li>
-                        <li class="display_flex"><a class="blue_link" href="">Belts</a> <span>(509)</span> </li>
-                        <li class="display_flex"><a class="blue_link" href="">Beards</a> <span>(509)</span> </li>
+                        <li> <a class="blue_link" href="">Shoes</a> <span>(509)</span> </li>
+                        <li><a class="blue_link" href="">Belts</a> <span>(509)</span> </li>
+                        <li><a class="blue_link" href="">Beards</a> <span>(509)</span> </li>
                     </ul>
                 </li>
 

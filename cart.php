@@ -17,7 +17,7 @@ $cartItems = getProducts($db, $cart->getCartItems(), ['Status', 'filename', 'Nam
 
 <div id="cart" class="container main_padding">
     
-    <div class="cart_header display_flex">
+    <div class="cart_header">
         <div class="cart_wide_width">Product</div>
         <div class="cart_narrow_width">Status</div>
         <div class="cart_narrow_width">Price</div>
@@ -37,8 +37,8 @@ $cartItems = getProducts($db, $cart->getCartItems(), ['Status', 'filename', 'Nam
             if($item->Status != 'In Stock')
                 $canCheckOut = false;
 
-            echo "<div class='product display_flex'>
-            <div class='display_flex cart_wide_width'>
+            echo "<div class='product'>
+            <div class='cart_wide_width'>
             <img class='product_img' src=".addImage($item->filename)." alt='Hey, Vsauce, image here.'>
             <div class='product_text_box'>
                 <span>".$item->Name."</span>
@@ -64,8 +64,8 @@ $cartItems = getProducts($db, $cart->getCartItems(), ['Status', 'filename', 'Nam
     ?>
     </div>
 
-    <div class="display_flex cart_bottom_wrapper">
-        <div class="cart_total display_flex">
+    <div class="cart_bottom_wrapper">
+        <div class="cart_total">
             <h1>CART TOTAL:</h1>
             <span><?php echo $cart->getCartTotal();?> €</span>
         </div>

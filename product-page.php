@@ -14,7 +14,7 @@ if(!filter_var($_GET['id'], FILTER_VALIDATE_INT) || !$product)
 include 'partials/header.php';
 ?>
 
-    <section class="product_section container display_flex">
+    <section class="product_section container">
             <aside class="image_wrapper">
                 <img src=<?php echo addImage($product->filename); ?> alt="product Img">
             </aside>

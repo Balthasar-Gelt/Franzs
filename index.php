@@ -12,7 +12,7 @@ $indexPage = new IndexPage(new DB($dbConfig));
 
     <header class="container">
 
-        <section class="header_main display_flex">
+        <section class="header_main">
             <div class="header_title center_text">
                 <h1><?php echo $indexPage->getProperty('title'); ?></h1>
                 <h2><?php echo $indexPage->getProperty('subTitle'); ?></h2>
@@ -49,7 +49,7 @@ $indexPage = new IndexPage(new DB($dbConfig));
             ?>
         </ul>
 
-        <section class="display_flex one_product_row container">
+        <section class="one_product_row container">
 
             <aside class="center_text">
                 <h1> <?php echo $indexPage->getProperty('bottomRowTitle'); ?> </h1>

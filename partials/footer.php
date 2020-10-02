@@ -1,6 +1,6 @@
 <footer>
         <div class="container">
-            <ul class="display_flex">
+            <ul>
                 <li class="footer_section">
                     <h1>Aboot Us</h1>
                     <span>
