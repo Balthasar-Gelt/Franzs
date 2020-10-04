@@ -9,7 +9,7 @@
         }
 
         &:last-child{
-            border-top: 1px solid $primaryColor;
+            @include border(top);
             margin-bottom: 0;
         }
 
@@ -38,7 +38,7 @@
     transform: translateX(100%);
     background-color: white;
     z-index: 7;
-    transition: opacity 300ms, transform 300ms;
+    transition: opacity $animationSpeed, transform $animationSpeed;
 }
 
 #aside_overlay{
@@ -51,7 +51,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.555);
     z-index: 7;
-    transition: opacity 300ms;
+    transition: opacity $animationSpeed;
 }
 
 #aside_button{
@@ -64,7 +64,7 @@
     border-radius: 50%;
     border: 1px solid black;
     background-color: white;
-    transition: transform 300ms;
+    transition: transform $animationSpeed;
 
     &:active{
         transform: scale(1);
@@ -74,7 +74,7 @@
 .shop_items{
 
     .item_list{
-        border-left: 1px solid $primaryColor;
+        @include border(left);
         margin-top: 0;
     }
 }
@@ -88,15 +88,15 @@
 }
 
 .noUi-connect{
-    background: $buttonBackground;
+    background: $secondaryColor;
 }
 
 .noUi-base{
-    background-color: $primaryColor;
+    background-color: $lighterPrimaryColor;
 }
 
 .noUi-handle{
-    border-color: $primaryColor;
+    border-color: $darkerPrimaryColor;
     box-shadow: none;
 }
 
@@ -111,8 +111,7 @@
 @media (min-width: 750px) {
 
     .shop_container{
-        @include flexStart;
-        flex-direction: row-reverse;
+        @include flex($align: flex-start, $direction: row-reverse);
     }
 
     .shop_items{
@@ -135,7 +134,7 @@
                 padding-bottom: 1em;
             }
 
-            border: 1px solid $primaryColor;
+            @include border;
         }
 
         width: 30%;
