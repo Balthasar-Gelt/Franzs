@@ -5,21 +5,27 @@
 }
 
 body{
+    color: $primaryTextColor;
     margin: 0;
     font-family: $fontStyle;
+}
+
+input{
+    font-family: $fontStyle;
+    font-weight: 300;
 }
 
 a{
     text-decoration: none;
     color: $linkColor;
-    transition: color 300ms;
+    transition: color $animationSpeed;
 
     &:hover{
-        color: $buttonBackground;
+        color: $darkerSecondaryColor;
     }
 
     &:active{
-        color: darken($color: $buttonBackground, $amount: 10%);
+        color: $lighterSecondaryColor;
     }
 }
 
