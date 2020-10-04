@@ -29,11 +29,11 @@ header {
 }
 
 .item_list{
-    @include flexStart;
+    @include flex($align: flex-start);
     width: 100%;
     margin-bottom: 3em;
     margin-top: 3em;
-    border-top: 1px solid $primaryColor;
+    @include border(top);
 }
 
 .item{
@@ -45,7 +45,7 @@ header {
     img{
         width: 75%;
         height: auto;
-        transition: transform 300ms;
+        transition: transform $animationSpeed;
     }
 
     a{
@@ -83,12 +83,12 @@ header {
     }
 
     position: relative;
-    border-right: 1px solid $primaryColor;
-    border-bottom: 1px solid $primaryColor;
+    @include border(right);
+    @include border(bottom);
     text-align: center;
     width: 50%;
     padding-bottom: 7.5em;
-    transition: opacity 300ms;
+    transition: opacity $animationSpeed;
 }
 
 .one_product_row {
@@ -109,7 +109,7 @@ header {
         background-color: black;
         color: white;
         margin: 1.75em 0;
-        transition: background-color 300ms;
+        transition: background-color $animationSpeed;
 
         &:hover{
             background-color: lighten($color: black, $amount: 20%);
@@ -138,8 +138,7 @@ header {
             font-size: 1.75vw;
         }
 
-        @include flex;
-        justify-content: flex-end;
+        @include flex($justify: flex-end);
     }
 
     .item_list{
@@ -152,8 +151,7 @@ header {
     header{
 
         .header_main{
-            @include flex;
-            justify-content: flex-end;
+            @include flex($justify: flex-end);
         }
 
         .header_title{
