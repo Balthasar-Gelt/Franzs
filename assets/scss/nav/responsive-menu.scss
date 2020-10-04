@@ -1,3 +1,5 @@
+@import '../generals/variables';
+
 .menu_overlay{
 
     .overlay_img_wrapper{
@@ -14,7 +16,7 @@
 
             cursor: pointer;
             transform: scale(1.5);
-            transition: transform 300ms;
+            transition: transform $animationSpeed;
         }
 
         padding-right: 2em;
@@ -33,7 +35,7 @@
         line-height: 2em;
         font-size: 1.75em;
         top: 30%;
-        transition: top 300ms;
+        transition: top $animationSpeed;
     }
 
     display: none;
@@ -46,5 +48,5 @@
     left: 0;
     z-index: 9;
     padding-top: 3em;
-    transition: opacity 300ms;
+    transition: opacity $animationSpeed;
 }
