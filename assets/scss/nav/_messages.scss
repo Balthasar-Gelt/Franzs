@@ -2,17 +2,14 @@
 
 .message_container{
     visibility: hidden;
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    @include fixedPosition;
     opacity: 0;
     padding: .5em;
     border: .2em solid;
     background-color: white;
     line-height: 1.5em;
     text-align: center;
-    transition: opacity 300ms;
+    transition: opacity $animationSpeed;
     z-index: 99;
 }
 
