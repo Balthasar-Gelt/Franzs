@@ -1,9 +1,29 @@
-@import './classes';
+@import '../generals/variables';
+
+%primaryButton{
+    cursor: pointer;
+    font-size: .85em;
+    display: inline-block;
+    padding: 1em 2em;
+    color: $buttonTextColor !important;
+    background-color: $secondaryColor;
+    border-radius: .2em;
+    margin-top: 2em;
+    transition: background-color $animationSpeed;
+
+    &:hover{
+        background-color: $darkerSecondaryColor;
+    }
+
+    &:active{
+        background-color: $lighterSecondaryColor;
+    }
+}
 
 // PRODUCT PAGE BUTTON
 
 #filter_button{
-    @extend %blueButton;
+    @extend %primaryButton;
 }
 
 // HEADER BUTTON
@@ -11,7 +31,7 @@
 header{
 
     a{
-        @extend %blueButton;
+        @extend %primaryButton;
         margin-top: 1em;
     }
 }
@@ -20,7 +40,7 @@ header{
 
 #checkout_link{
 
-    @extend %blueButton;
+    @extend %primaryButton;
     padding: 1.5em;
 }
 
@@ -29,11 +49,11 @@ header{
 form{
 
     button{
-        @extend %blueButton;
+        @extend %primaryButton;
         border: none;
     }
 }
 
 .disabled_button{
-    background-color: grey !important;
+    background-color: $darkerPrimaryColor !important;
 }
