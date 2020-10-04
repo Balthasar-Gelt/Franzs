@@ -1,13 +1,35 @@
+// MAIN COLORS
+
 $primaryColor: rgb(230, 230, 230);
-$secondaryTextColor: #8c92a0;
-$lighterPrimary:  rgb(245, 245, 245);
+$darkerPrimaryColor: darken($color: $primaryColor, $amount: 5%);
+$lighterPrimaryColor: lighten($color: $primaryColor, $amount: 5%);
 
-$linkColor: black;
+$secondaryColor: #207dff;
+$darkerSecondaryColor: darken($color: $secondaryColor, $amount: 5%);
+$lighterSecondaryColor: lighten($color: $secondaryColor, $amount: 5%);
 
-$buttonBackground: #207dff;
-
-$fontStyle: Rubik, sans-serif;
+// MESSAGES
 
 $goodColor: #8bb911;
 $warningColor: #fe9600;
 $errorColor: #fe4236;
+
+// TEXT
+
+$fontStyle: Rubik, sans-serif;
+
+$primaryTextColor: black;
+$secondaryTextColor: darken($color: $primaryColor, $amount: 35%);
+
+// BORDER
+
+$borderWidth: 1px;
+$borderColor: $primaryColor;
+
+// OTHER
+
+$animationSpeed: 300ms;
+
+$linkColor: black;
+
+$buttonTextColor: white;
