@@ -9,7 +9,7 @@
 
     opacity: 0;
     display: none;
-    transition: opacity 300ms;
+    transition: opacity $animationSpeed;
 }
 
 .page_header{
@@ -22,7 +22,7 @@
     text-align: center;
     display: block;
     padding: 1em 0;
-    background-color: $lighterPrimary;
+    background-color: $lighterPrimaryColor;
     margin-bottom: 2.5em;
 }
 
@@ -42,10 +42,10 @@
     }
 
     font-weight: 300;
-    border: 1px solid $primaryColor;
+    @include border;
     border-bottom: none;
     padding: 1em .5em;
-    background-color: $lighterPrimary;
+    background-color: $lighterPrimaryColor;
     @include flex;
 }
 
@@ -55,7 +55,7 @@
         margin-bottom: 0;
     }
 
-    border: 1px solid $primaryColor;
+    @include border;
     padding: 2em;
 }
 
@@ -74,9 +74,8 @@
     }
 
     li{
-        border-bottom: 1px solid $primaryColor;
+        @include border(bottom);
     }
-
 
     text-align: center;
 }
@@ -94,7 +93,7 @@
     }
 
     padding: 1em 0;
-    @include flexStart;
+    @include flex($align: flex-start);
 }
 
 @media (min-width: 750px) {
@@ -108,8 +107,7 @@
                 margin: 1em 0;
             }
 
-            @include flex;
-            flex-wrap: unset;
+            @include flex($wrap: unset);
         }
     }
 }
@@ -123,7 +121,7 @@
     #checkout_form{
 
         .radio_button_section{
-            @include flexStart;
+            @include flex($align: flex-start);
         }
 
         .radio_button_wrapper{
@@ -134,8 +132,7 @@
     }
 
     .checkout_container{
-        @include flexStart;
-        flex-direction: row-reverse;
+        @include flex($align: flex-start, $direction: row-reverse);
     }
 
     .product_table_checkout{
@@ -152,7 +149,7 @@
             padding: .5em 0;
         }
 
-        border-left: 1px solid $primaryColor;
+        @include border(left);
         padding-left: 1.5em;;
         max-width: 26em;
         width: 35%;
