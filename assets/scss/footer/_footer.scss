@@ -28,7 +28,7 @@ footer{
     }
 
     line-height: 1.75em;
-    background-color: $lighterPrimary;
+    background-color: $lighterPrimaryColor;
     margin-top: 3em;
     padding-top: 4em;
     padding-bottom: 7em;
@@ -53,7 +53,7 @@ footer{
                 width: 30%;
             }
 
-            @include flexStart;
+            @include flex($align: flex-start);
         }
     }
 }
