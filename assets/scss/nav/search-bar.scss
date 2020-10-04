@@ -19,45 +19,40 @@
         }
     }
 
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    @include boxShadow;
     max-width: 55em;
     width: 100%;
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    @include fixedPosition;
     visibility: hidden;
     background-color: white;
     z-index: 8;
 }
 
-
-
 #close_search{
 
     &:hover{
-        background-color: darken($color: $buttonBackground, $amount: 5%);
+        background-color: $darkerSecondaryColor;
     }
 
     &:active{
-        background-color: darken($color: $buttonBackground, $amount: 10%);
+        background-color: $lighterSecondaryColor;
     }
 
     cursor: pointer;
     display: block;
     width: 30%;
     text-align: center;
-    background-color: $buttonBackground;
-    color: white;
+    background-color: $secondaryColor;
+    color: $buttonTextColor;
     padding: .5em;
-    transition: background-color 300ms;
+    transition: background-color $animationSpeed;
 }
 
 .products_search_container{
 
     li{
         padding: 1em;
-        border-bottom: 1px solid $primaryColor;
+        @include border(bottom);
     }
 
     ul{
@@ -80,6 +75,17 @@
     text-align: center;
 }
 
+.searched_item_link{
+
+    span{
+        display: block;
+    }
+
+    .searched_item_status{
+        color: $darkerPrimaryColor;
+    }
+}
+
 @media (min-width: 1000px) {
 
     #search_bar{
@@ -89,7 +95,7 @@
             position: absolute;
             width: 85%;
             background-color: white;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            @include boxShadow; 
             z-index: 1;
         }
 
@@ -110,15 +116,9 @@
                 width: 25%;
             }
 
-            .searched_item_status{
-                color: darken($color: $secondaryTextColor, $amount: 20%);
-            }
-
-            color: black;
             font-size: 1.3em;
             font-weight: 300;
-            @include flex;
-            flex-wrap: nowrap;
+            @include flex($wrap: nowrap);
         }
     
         input{
