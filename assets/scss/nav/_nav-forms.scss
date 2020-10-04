@@ -7,14 +7,14 @@
     }
 
     a{
-        color: $buttonBackground;
+        color: $secondaryColor;
 
         &:hover{
-            color: darken($color: $buttonBackground, $amount: 10%);
+            color: $darkerSecondaryColor;
         }
 
         &:active{
-            color: darken($color: $buttonBackground, $amount: 15%);
+            color: $lighterSecondaryColor;
         }
     }
 
@@ -28,7 +28,8 @@
             transform: scale(.7)
         }
         
-        transition: transform 300ms;
+        cursor: pointer;
+        transition: transform $animationSpeed;
     }
 
     max-width: 25em;
@@ -36,24 +37,14 @@
     opacity: 0;
     visibility: hidden;
     width: 100%;
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1em;
+    @include fixedPosition(30%);
+    padding: 1.5em 2em;
     background-color: white;
     z-index: 10;
-    transition: top 300ms, opacity 300ms;
+    transition: top $animationSpeed, opacity $animationSpeed;
 }
 
 .form_img_wrapper{
     text-align: right;
     margin-bottom: 1em;
-}
-
-@media (min-width: 750px) {
-
-    .form_wrapper{
-        padding: 1.5em 2em;
-    }
 }
