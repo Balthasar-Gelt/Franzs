@@ -1,25 +1,40 @@
 @import './_variables';
 
-@mixin flex(){
+@mixin flex($justify: space-between, $align: center, $wrap: wrap, $direction: row){
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
 }
 
-@mixin flexStart {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+@mixin  border($direction: null) {
+    
+    @if $direction == top {
+        border-top: solid $borderWidth $borderColor;
+    }
+    @else if $direction == right {
+        border-right: solid $borderWidth $borderColor;
+    }
+    @else if $direction == bottom {
+        border-bottom: solid $borderWidth $borderColor;
+    }
+    @else if $direction == left {
+        border-left: solid $borderWidth $borderColor;
+    }
+    @else{
+        border: solid $borderWidth $borderColor;
+    }
+    
 }
 
-@mixin blueButton {
-        font-size: .85em;
-        display: inline-block;
-        padding: 1em 2em;
-        color: white;
-        background-color: $buttonBackground;
-        border-radius: .2em;
-        margin-top: 2em;
+@mixin fixedPosition($top: 10%){
+    position: fixed;
+    top: $top;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin boxShadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
