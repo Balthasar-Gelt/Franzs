@@ -7,7 +7,7 @@
         }
 
         padding: 1em 0;
-        border-bottom: 1px solid $primaryColor;
+        @include border(bottom);
     }
 
     form{
@@ -52,7 +52,7 @@
     }
 
     padding: 2em;
-    border: 1px solid $primaryColor;
+    @include border;
     line-height: 1.5em;
     margin-bottom: 3em;
     text-align: center;
@@ -62,7 +62,7 @@
 
     li{
         padding: .5em 0;
-        border-bottom: 1px solid $primaryColor;
+        @include border(bottom);
 
         &:first-child{
             padding-top: 0;
@@ -100,7 +100,7 @@
         }
 
         &:active{
-            background-color: rgba(255, 255, 255, 0.08);
+            background-color: rgba(0, 0, 0, 0.100);
         }
 
         cursor: pointer;
@@ -110,7 +110,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        transition: background-color 300ms;
+        transition: background-color $animationSpeed;
     }
 
     img{
@@ -128,7 +128,7 @@
 .dashboard_section_content_wrapper{
     overflow-y: hidden;
     max-height: 0px;
-    transition: max-height 300ms;
+    transition: max-height $animationSpeed;
 }
 
 @media (min-width: 750px) {
@@ -146,8 +146,6 @@
             border-bottom: none;
         }
     }
-
-
 
     .pending_order_list_row{
 
@@ -170,11 +168,10 @@
 
             padding: .5em;
             width: 49%;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            @include boxShadow;
         }
 
         padding: .5em;
-
         @include flex;
     }
 
@@ -188,7 +185,7 @@
 
             &:nth-child(odd){
                 padding-right: .5em;
-                border-right: 1px solid $primaryColor;
+                @include border(right)
             }
 
             &:nth-child(even){
@@ -217,7 +214,7 @@
             }
 
             border-right: none !important;
-            border-bottom: 1px solid $primaryColor;
+            @include border(bottom);
             width: 100%;
             padding: .5em 0em !important;
             @include flex;
