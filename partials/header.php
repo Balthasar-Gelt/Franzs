@@ -4,6 +4,7 @@ if (session_status() == PHP_SESSION_NONE)
     session_start();
 
 require_once 'nav-menu.php';
+include_once 'variables/baseUrl.php';
 ?>
 
 <html lang="en">
@@ -11,7 +12,7 @@ require_once 'nav-menu.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href=" <?php echo 'http://'. $_SERVER['SERVER_NAME'] .':'. $_SERVER['SERVER_PORT'] .'/Dealers/';?>/dist/main.css">
+    <link rel="stylesheet" href=" <?php echo BASE_URL . '/dist/main.css'; ?> ">
     <title>Eshop with antiquities</title>
 </head>
 
@@ -24,7 +25,7 @@ require_once 'nav-menu.php';
 
             <?php printNavMenu(); ?>
 
-            <img class="menu_icon" src="<?php echo 'http://'. $_SERVER['SERVER_NAME'] .':'. $_SERVER['SERVER_PORT'] .'/Dealers/' . '/assets/other/menu.svg'; ?>" alt="Hey, Vsauce, image here">
+            <img class="menu_icon" src="<?php echo BASE_URL . '/assets/other/menu.svg'; ?>" alt="Hey, Vsauce, image here">
         </div>
 
     </nav>

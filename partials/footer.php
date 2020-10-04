@@ -26,7 +26,7 @@
             </ul>
         </div>
     </footer>
-    <?php include 'variables/baseUrl.php'; ?>
-<script src="<?php  echo $baseUrl . 'dist/main.js'?>"></script>
+    <?php include_once 'variables/baseUrl.php'; ?>
+<script src="<?php  echo BASE_URL . 'dist/main.js'?>"></script>
 </body>
 </html>
