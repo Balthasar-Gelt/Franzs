@@ -21,7 +21,7 @@ function shippingOptionsFetch(element){
     .then(function(response){
 
         if(response != false){
-            checkoutTotal.innerHTML = (parseFloat(response) + parseFloat(element.getAttribute('value'))) + ' ' + monetarySymbol;
+            checkoutTotal.innerHTML = (Math.round((parseFloat(response) + parseFloat(element.getAttribute('value'))) * 100) /100) + ' ' + monetarySymbol;
             checkoutShipping.innerHTML = parseFloat(element.getAttribute('value')) + ' ' + monetarySymbol;
         }
     })
