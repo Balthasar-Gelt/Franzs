@@ -4,6 +4,7 @@ require_once 'page-funcs/helper-funcs/sentinel-use.php';
 require_once 'page-funcs/helper-funcs/redirect.php';
 require_once 'page-funcs/dashboard-func.php';
 require_once 'page-funcs/helper-funcs/addImage.php';
+require_once 'variables/currency-symbol.php';
 
 use Cartalyst\Sentinel\Native\Facades\Sentinel;
 
@@ -53,18 +54,18 @@ include 'partials/header.php';
             echo '<li class="dashboard_product">
                     <img src="' .addImage($product->fileName). '" alt="">
                     <h3>'. $product->name .'</h3>
-                    <span>'. $product->price .' $</span>
+                    <span>'. $product->price .' '. $currencySymbol .'</span>
                 </li>';
         }
 
         echo    '<li>
                     <h3>Delivery</h3>
-                    <span>'. ($order->delivery == 'standard' ? 10 : 20) .' $</span>
+                    <span>'. ($order->delivery == 'standard' ? 10 : 20) .' '. $currencySymbol .'</span>
                     </li>
 
                 <li>
                     <h3>Order total</h3>
-                    <span>'. $order->orderTotal .' $</span>
+                    <span>'. $order->orderTotal .' '. $currencySymbol .'</span>
                 </li>
             </ul>';
 
@@ -110,7 +111,7 @@ include 'partials/header.php';
                     <li>
 
                         <h2><strong>Order Number</strong> '. $order->id .'</h2>
-                        <span><strong>Order total</strong> '. $order->orderTotal .' $</span>
+                        <span><strong>Order total</strong> '. $order->orderTotal .' '. $currencySymbol .'</span>
                         <span><strong>Order delivered</strong>'. formatDate($order->deliveryDate) .'</span>
 
                     </li>';

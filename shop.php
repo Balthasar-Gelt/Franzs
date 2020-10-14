@@ -5,6 +5,7 @@ include 'partials/header.php';
 require 'variables/dbConfig.php';
 require 'page-funcs/classes/DB.php';
 require 'page-funcs/helper-funcs/addImage.php';
+require 'variables/currency-symbol.php';
 
 $db = new DB($dbConfig);
 $products = $db->fetchRows('SELECT Price,id,filename,Name,Status,Price FROM PRODUCTS');
@@ -56,7 +57,7 @@ $products = $db->fetchRows('SELECT Price,id,filename,Name,Status,Price FROM PROD
                                     <div class='item_text'>
                                         <h1>".$product->Name."</h1>
                                         <span>".$product->Status."</span>
-                                        <h1>".$product->Price." $</h1>
+                                        <h1>".$product->Price." ".$currencySymbol."</h1>
                                     </div>
                                 </a>
                             </li>";

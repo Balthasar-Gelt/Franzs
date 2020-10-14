@@ -5,7 +5,7 @@ require 'page-funcs/helper-funcs/addImage.php';
 require 'page-funcs/helper-funcs/redirect.php';
 require 'page-funcs/classes/DB.php';
 require 'variables/dbConfig.php';
-
+require 'variables/currency-symbol.php';
 $product = getProducts(new DB($dbConfig), [$_GET['id']], ['filename', 'Name', 'Description', 'Price', 'Status'])[0];
 
 if(!filter_var($_GET['id'], FILTER_VALIDATE_INT) || !$product)
@@ -24,7 +24,7 @@ include 'partials/header.php';
                 
                 <P><?php echo $product->Description; ?></P>
                 
-                <span class="price"><?php echo $product->Price; ?> $</span>
+                <span class="price"><?php echo $product->Price .' '. $currencySymbol; ?></span>
 
                 <div class="availability">
                     Availability: <?php echo '<span class="' .str_replace(' ', '', $product->Status) . '">';

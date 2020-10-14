@@ -6,6 +6,7 @@ require 'variables/dbConfig.php';
 require 'page-funcs/classes/DB.php';
 require 'page-funcs/classes/Cart.php';
 require 'page-funcs/get-products.php';
+require 'variables/currency-symbol.php';
 
 $db = new DB($dbConfig);
 $cart = new Cart($db);
@@ -55,7 +56,7 @@ $user = Sentinel::getUser();
                         echo "<li>
                         <img src=".addImage($item->filename)." alt='hey, Vsauce, image here'>
                         <span>".$item->Name."</span>
-                        <span>".$item->Price." $</span>
+                        <span>".$item->Price." ".$currencySymbol."</span>
                         </li>";
                         }
                     }
@@ -64,17 +65,17 @@ $user = Sentinel::getUser();
 
             <div class="checkout_price_wrapper">
                 <span>Subtotal</span>
-                <span><?php echo $cart->getCartTotal() ?> $</span>
+                <span><?php echo $cart->getCartTotal() .' '. $currencySymbol ?> </span>
             </div>
 
             <div class="checkout_price_wrapper shipping">
                 <span>Shipping</span>
-                <span id="product_table_shipping"><?php echo $defaultShipping; ?> $</span>
+                <span id="product_table_shipping"><?php echo $defaultShipping .' '. $currencySymbol; ?></span>
             </div>
 
             <div class="checkout_total">
                 <h3>Total</h3>
-                <span><?php echo $cart->getCartTotal($defaultShipping) ?> $</span>
+                <span><?php echo $cart->getCartTotal($defaultShipping) .' '. $currencySymbol; ?></span>
             </div>
         </div>
 
@@ -144,7 +145,7 @@ $user = Sentinel::getUser();
                     <input required type="radio" id="form_delivery_standard" name="form_delivery" value="standard" checked>
                     <label value="<?php echo $defaultShipping; ?>" for="form_delivery_standard">
                         <span>Standard delivery (5-7 days)</span>
-                        <span><?php echo $defaultShipping; ?>€</span>
+                        <span><?php echo $defaultShipping .' '. $currencySymbol; ?></span>
                     </label>
                 </div>
 
@@ -152,7 +153,7 @@ $user = Sentinel::getUser();
                     <input required type="radio" id="form_delivery_express" name="form_delivery" value="express">
                     <label value="<?php echo $expressShipping; ?>" for="form_delivery_express">
                         <span>Express delivery (1-3 days)</span>
-                        <span><?php echo $expressShipping; ?>€</span>
+                        <span><?php echo $expressShipping .' '. $currencySymbol; ?></span>
                     </label>
                 </div>
             </div>

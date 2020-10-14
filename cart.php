@@ -6,6 +6,7 @@ require 'page-funcs/classes/DB.php';
 require 'page-funcs/classes/Cart.php';
 require 'page-funcs/get-products.php';
 require 'page-funcs/helper-funcs/addImage.php';
+require 'variables/currency-symbol.php';
 
 $canCheckOut = false;
 
@@ -46,7 +47,7 @@ $cartItems = getProducts($db, $cart->getCartItems(), ['Status', 'filename', 'Nam
             </div>
 
             <div class='cart_narrow_width'>".$item->Status."</div>
-            <div class='cart_narrow_width'>".$item->Price."</div>
+            <div class='cart_narrow_width'>".$item->Price." ".$currencySymbol."</div>
 
             <div class='remove_product_wrapper cart_narrow_width'>
                 <a class='remove_product_link' href='page-funcs/helper-funcs/cart-action.php?id=".$item->id."&type=deleteFromCart'>
@@ -66,7 +67,7 @@ $cartItems = getProducts($db, $cart->getCartItems(), ['Status', 'filename', 'Nam
 
     <div class="cart_total">
         <h1>CART TOTAL:</h1>
-        <span><?php echo $cart->getCartTotal();?> €</span>
+        <span><?php echo $cart->getCartTotal() . " " . $currencySymbol;?> </span>
     </div>
     
     <a id="checkout_link"
