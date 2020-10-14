@@ -20,7 +20,7 @@
     }
 }
 
-// PRODUCT PAGE BUTTON
+// SHOP PAGE FILTER BUTTON
 
 #filter_button{
     @extend %primaryButton;
@@ -56,4 +56,10 @@ form{
 
 .disabled_button{
     background-color: $darkerPrimaryColor !important;
+}
+
+// PRODUCT PAGE BUTTON
+
+.product_button{
+    @extend %primaryButton;
 }
