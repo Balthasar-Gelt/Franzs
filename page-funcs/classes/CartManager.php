@@ -1,5 +1,7 @@
 <?php
 
+// This class allows to work with the Cart class ie. adding items, deleting from and emptying cart
+
 class CartManager{
 
     private $cart = [],
@@ -56,7 +58,7 @@ class CartManager{
     //  ADD TO CART RELATED FUNCTIONS
     //
 
-    public function checkForDuplicity($value){
+    private function checkForDuplicity($value){
 
         return in_array($value, $this->cart);
     }

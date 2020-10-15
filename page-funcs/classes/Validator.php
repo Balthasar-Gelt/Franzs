@@ -1,14 +1,22 @@
 <?php
 
+// Basic validator class
+// $inputsToValidate - Associative array, keys are types of validations (functions) that are to be performed on their values
+// for example ['email' => $emailInputValue] will call emailValidation function on $emailInputValue after calling validate function
+// $response - If input value didnt go through a validation this will be returned
+
 class Validator{
 
-    protected $inputsToValidate;
+    protected $inputsToValidate; 
     protected $response;
 
     function __construct($inputs){
 
         $this->inputsToValidate = $inputs;
     }
+
+// Validate is used for validating ALL inputs at once
+// Returns error response on the very first input value that doesnt go through its validation function
 
     public function validate(){
 

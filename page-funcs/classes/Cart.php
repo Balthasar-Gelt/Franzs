@@ -1,5 +1,8 @@
 <?php
 
+// Cart stores users items saved in a session and a cookie
+// Only public methods are for retrieving cart total and cart items
+
 class Cart{
 
     private $cart = [],
