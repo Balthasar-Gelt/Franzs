@@ -1,5 +1,3 @@
-import {checkIfVisible} from '../general-form-functionality/check-if-visible';
-
 let button, cart;
 
 export function inintializeItemPreviewButton(){
