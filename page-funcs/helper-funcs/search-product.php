@@ -13,7 +13,7 @@ else
     die();
 
 $db = new DB($dbConfig);
-$products = $db->fetchRows("SELECT id,Name,filename,Price,Status FROM PRODUCTS WHERE Name LIKE ?", [$searchText."%"]);
+$products = $db->fetchRows("SELECT id,Name,filename,Price,Status FROM PRODUCTS WHERE Name LIKE ?", ["%".$searchText."%"]);
 
 foreach ($products as $product) {
     
