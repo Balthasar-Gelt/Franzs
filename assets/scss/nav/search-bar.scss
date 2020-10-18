@@ -81,7 +81,7 @@
     }
 
     .searched_item_status{
-        color: $darkerPrimaryColor;
+        color: darken($color: $primaryColor, $amount: 30%);
     }
 }
 
