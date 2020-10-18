@@ -5,6 +5,10 @@ require 'variables/dbConfig.php';
 
 $db = new DB($dbConfig);
 
+// Creates array of orders and their products that is converted to object
+// Keys of both arrays match specific orders, example - orders[0] holds info about first pending order
+// And products[0] holds all items of the same pending order
+
 function pendingOrders($userIdPendingOrders){
 
     global $db;
