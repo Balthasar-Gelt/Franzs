@@ -5,12 +5,13 @@ require_once 'page-funcs/helper-funcs/redirect.php';
 require_once 'page-funcs/dashboard-func.php';
 require_once 'page-funcs/helper-funcs/addImage.php';
 require_once 'variables/currency-symbol.php';
+require_once 'variables/shipping.php';
 
 use Cartalyst\Sentinel\Native\Facades\Sentinel;
 
-$standard = 10;
-$express = 20;
 $user = null;
+
+// IF NON USER IS LOGGED IN SITE IS REDIRECTED
 
 if(!Sentinel::check()){
     redirect();
@@ -60,7 +61,7 @@ include 'partials/header.php';
 
         echo    '<li>
                     <h3>Delivery</h3>
-                    <span>'. ($order->delivery == 'standard' ? 10 : 20) .' '. $currencySymbol .'</span>
+                    <span>'. ($order->delivery == 'standard' ? $defaultShipping : $expressShipping) .' '. $currencySymbol .'</span>
                     </li>
 
                 <li>

@@ -5,16 +5,14 @@ require 'page-funcs/helper-funcs/printValue.php';
 require 'variables/dbConfig.php';
 require 'page-funcs/classes/DB.php';
 require 'page-funcs/classes/Cart.php';
-require 'page-funcs/get-products.php';
+require 'page-funcs/helper-funcs/get-products.php';
 require 'variables/currency-symbol.php';
+require 'variables/shipping.php';
 
 $db = new DB($dbConfig);
 $cart = new Cart($db);
 
 $cartItems = getProducts($db, $cart->getCartItems(), ['filename', 'Name', 'Price']);
-
-$defaultShipping = 10;
-$expressShipping = 20;
 
 if (session_status() == PHP_SESSION_NONE)
 session_start();
