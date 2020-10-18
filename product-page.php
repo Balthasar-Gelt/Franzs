@@ -1,6 +1,6 @@
 
 <?php
-require 'page-funcs/get-products.php';
+require 'page-funcs/helper-funcs/get-products.php';
 require 'page-funcs/helper-funcs/addImage.php';
 require 'page-funcs/helper-funcs/redirect.php';
 require 'page-funcs/classes/DB.php';
