@@ -21,7 +21,7 @@
 
     @include boxShadow;
     max-width: 55em;
-    width: 100%;
+    width: 90%;
     @include fixedPosition;
     visibility: hidden;
     background-color: white;
@@ -57,7 +57,6 @@
 
     ul{
         overflow-y: scroll;
-        min-height: 1px;
         max-height: 90vh;
     }
 
