@@ -28,20 +28,26 @@ class CartManager{
 
     public function deleteFromCart($item){
 
-        if(!empty($this->cart)){
+        if(empty($this->cart)){
 
-            $response = [
-                'cartTotal' => $this->recountCartTotal($item),
-                'itemStatus' => $this->checkItemStatus($item),
-                'isEmpty' => $this->isEmptyCartAfterDelete($item)
-            ];
-
-            $this->deleteFromSession($item);
-            $this->deleteFromCookie($item);
-
-            return [1, $response];
+            return [2, 'Cart is already empty'];
         }
-        return [2, 'Cart is already empty'];
+        
+        else if(!in_array($item, $this->cart)){
+
+            return [3, 'This item is not in your cart'];
+        }
+
+        $response = [
+            'cartTotal' => $this->recountCartTotal($item),
+            'itemStatus' => $this->checkItemStatus($item),
+            'isEmpty' => $this->isEmptyCartAfterDelete($item)
+        ];
+
+        $this->deleteFromSession($item);
+        $this->deleteFromCookie($item);
+
+        return [1, $response];
     }
 
     public function emptyCart()
