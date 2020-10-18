@@ -4,7 +4,7 @@ include 'partials/header.php';
 require 'variables/dbConfig.php';
 require 'page-funcs/classes/DB.php';
 require 'page-funcs/classes/Cart.php';
-require 'page-funcs/get-products.php';
+require 'page-funcs/helper-funcs/get-products.php';
 require 'page-funcs/helper-funcs/addImage.php';
 require 'variables/currency-symbol.php';
 
