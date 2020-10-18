@@ -1,5 +1,10 @@
 <?php
 
+// Used as response to fetch calls
+// 'code' - indicates if response is positive (1), warning (2), or error (3)
+// 'answer' - text sent to be displayed
+// 'errorType' - used for input validation, specifies which input was wrong, for example ('phone')
+
 function answer($response){
 
     if(sizeof($response) == 2){
