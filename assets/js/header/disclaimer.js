@@ -5,10 +5,15 @@ export function initializeDisclaimer(){
     disclaimer = document.querySelector('.disclaimer');
     closeButton = document.querySelector('.disclaimer img');
 
-    closeButton.addEventListener('click', closeDisclaimer);
+    if(disclaimer && closeButton != null)
+        closeButton.addEventListener('click', e => closeDisclaimer(e));
 }
 
-function closeDisclaimer(){
+function closeDisclaimer(e){
+
+    e.preventDefault();
 
     disclaimer.style.display = 'none';
+
+    fetch(e.target.parentElement.href);
 }
