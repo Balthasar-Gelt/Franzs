@@ -17,7 +17,7 @@ $products = $db->fetchRows('SELECT Price,id,filename,Name,Status,Price FROM PROD
         <img id="aside_button" src="assets/other/<.svg" alt="Hey, Vsauce, image here">
         <aside class="side_content">
             <ul>
-                <li class="side_content_cell">
+                <li class="side_content_cell soon">
                     <h1>CATEGORIES</h1>
 
                     <ul>
