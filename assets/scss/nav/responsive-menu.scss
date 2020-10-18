@@ -2,25 +2,23 @@
 
 .menu_overlay{
 
-    .overlay_img_wrapper{
 
-        img{
+    img{
 
-            &:hover{
-                transform: scale(2);
-            }
-
-            &:active{
-                transform: scale(1);
-            }
-
-            cursor: pointer;
-            transform: scale(1.5);
-            transition: transform $animationSpeed;
+        &:hover{
+            transform: scale(2);
         }
 
-        padding-right: 2em;
-        text-align: right;
+        &:active{
+            transform: scale(1);
+        }
+
+        position: fixed;
+        top: 10%;
+        right: 10%;
+        cursor: pointer;
+        transform: scale(1.5);
+        transition: transform $animationSpeed;
     }
 
     a{
@@ -29,7 +27,6 @@
     }
 
     ul{
-
         position: relative;
         text-align: center;
         line-height: 2em;
@@ -38,6 +35,7 @@
         transition: top $animationSpeed;
     }
 
+    overflow-y: scroll;
     display: none;
     opacity: 0;
     position: fixed;
