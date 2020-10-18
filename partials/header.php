@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE)
     session_start();
 
 require_once 'nav-menu.php';
-include_once 'variables/baseUrl.php';
+require_once 'variables/baseUrl.php';
 ?>
 
 <html lang="en">
@@ -35,4 +35,5 @@ include_once 'responsive-menu.php';
 include_once 'search.php'; 
 include_once 'log-in-register-forms.php';
 include_once 'messages.php';
+include_once 'cookies-disclaimer.php';
 ?>
