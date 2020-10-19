@@ -10,7 +10,7 @@ require '../page-funcs/classes/CheckoutValidator.php';
 
 use Cartalyst\Sentinel\Native\Facades\Sentinel;
 
-$redirectString = 'http://localhost:8888/Dealers/checkout-final-page.php?message=';
+$redirectString = 'http://localhost:8888/Franzs/checkout-final-page.php?message=';
 
 $requiredInputs = ['form_email', 'form_first_name', 'form_last_name', 'form_street', 'form_city', 
                     'form_country', 'form_post', 'form_phone', 'form_card_number', 'form_card_name', 

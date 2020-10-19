@@ -11,7 +11,7 @@ function redirect($message = null){
             header('Location: '.$_SERVER['HTTP_REFERER']);
 
         else
-            header('Location: http://localhost:8888/Dealers/index.php');
+            header('Location: http://localhost:8888/Franzs/index.php');
 
         die();
     }

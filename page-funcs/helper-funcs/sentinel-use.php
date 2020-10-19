@@ -6,7 +6,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Cartalyst\Sentinel\Activations\IlluminateActivationRepository as Activation;
 
 // Include the composer autoload file
-require $_SERVER['DOCUMENT_ROOT'] . '/Dealers/vendor/autoload.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/Franzs/vendor/autoload.php';
 
 // Setup a new Eloquent Capsule instance
 $capsule = new Capsule;
