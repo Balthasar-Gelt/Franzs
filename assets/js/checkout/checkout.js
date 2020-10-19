@@ -5,8 +5,9 @@ import {initializeCardNumberMask} from '../general-form-functionality/masks/card
 import {initializeCardSecurityCodeMask} from '../general-form-functionality/masks/card-security-code-mask';
 import {initializePhoneMask} from '../general-form-functionality/masks/phone-mask';
 import {inintializeItemPreviewButton} from './item-preview-button';
+import { siteName } from '../general/site-name';
 
-if(window.location.pathname == '/Dealers/checkout.php'){
+if(window.location.pathname == '/'+ siteName +'/checkout.php'){
     
     initializeCheckoutForm();
     initializeShippingOptions();

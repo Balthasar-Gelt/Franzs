@@ -3,12 +3,13 @@ import {messages} from '../general/messages';
 import {logOutlinks} from '../general-form-functionality/links/log-out-links';
 import {logInLinks} from '../general-form-functionality/links/log-in-links';
 import {dashboardLinks} from '../general-form-functionality/links/dashboard-links';
+import { siteName } from '../general/site-name';
 
 let badSite;
 
 export function initializeLogOutLink(){
 
-    badSite = 'http://localhost:8888/Dealers/dashboard.php';
+    badSite = 'http://localhost:8888/'+ siteName +'/dashboard.php';
 
     for (const link of logOutlinks) {
         link.addEventListener('click', e => logOutLinkClickAction(e, link));
@@ -30,7 +31,7 @@ function logOutLinkClickAction(e, logOutLink){
                 hideLogInIconMenu();
 
                 if(window.location.href == badSite)
-                    window.location.href = "http://localhost:8888/Dealers/index.php";
+                    window.location.href = "http://localhost:8888/"+ siteName +"/index.php";
             }
 
             showMessage(messages[response['code'] - 1], response['answer']);
