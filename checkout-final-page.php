@@ -1,17 +1,20 @@
 <?php
 
+require 'variables/baseUrl.php';
+
 if (session_status() == PHP_SESSION_NONE)
-session_start();
+    session_start();
 
 if(!isset($_SESSION['checkOutStatus'])){
-    header('Location:http://localhost:8888/Dealers/' . 'cart.php');
+    header('Location:'. BASE_URL . 'cart.php');
     die();
 }
 
 
 else{
+
     if($_SESSION['checkOutStatus'] != "pending"){
-        header('Location:http://localhost:8888/Dealers/' . 'cart.php');
+        header('Location:'. BASE_URL . 'cart.php');
         die();
     }
 }
