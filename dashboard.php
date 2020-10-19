@@ -146,7 +146,7 @@ include 'partials/header.php';
                 <span class="alert email_alert">Invalid input</span>
             </div>
 
-            <div class="form_row">
+            <div class="form_row_multiple_input">
                 <div class="form_input small_input">
                     <label for="form_first_name">First name</label>
                     <input value="<?php echo $user->first_name; ?>" required class="checkout_input" placeholder="First name" type="text" id="form_first_name" name="form_first_name">
@@ -173,7 +173,7 @@ include 'partials/header.php';
                 <input value="<?php echo $user->province; ?>" class="checkout_input" placeholder="Province/State" type="text" id="form_province" name="form_province">
             </div>
 
-            <div class="form_row">
+            <div class="form_row_multiple_input">
                 <div class="form_input small_input">
                     <label for="form_country">Country</label>
                     <input value="<?php echo $user->country; ?>" required class="checkout_input" placeholder="Country" type="text" id="form_country" name="form_country">
