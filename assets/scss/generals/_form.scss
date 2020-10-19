@@ -32,9 +32,21 @@ form{
         position: relative;
     }
 
+    .small_input{
+        width: 100%;
+    }
+
+    .form_row{
+        margin-bottom: 0em;
+    }
+
+    .form_row_multiple_input{
+        margin-bottom: 0em
+    }
+
     input{
-        padding-left: .5em;
         margin-bottom: 1.5em;
+        padding-left: .5em;
         height: 4em;
         width: 100%;
         @include border;
@@ -79,8 +91,45 @@ form{
             transition: background-color $animationSpeed;
         }
 
-        margin-bottom: 1em;
+        width: 100%;
+        margin-bottom: 1.5em;
         border: 1px solid $primaryColor;
         @include flex;
+    }
+}
+
+@media (min-width: 550px) {
+
+    .radio_button_section{
+        @include flex($align: flex-start);
+    }
+
+}
+
+@media (min-width: 550px) {
+
+    form{
+
+        .small_input{
+            width: 49%;
+        }
+    
+        .form_row{
+            margin-bottom: 1.5em;
+        }
+    
+        .form_row_multiple_input{
+            margin-bottom: 1.5em;
+            @include flex;
+        }
+
+        .radio_button_wrapper{
+            width: 49%;
+            margin-bottom: 0;
+        }
+
+        input{
+            margin-bottom: 0;
+        }
     }
 }
