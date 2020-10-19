@@ -18,13 +18,13 @@ if (session_status() == PHP_SESSION_NONE)
 session_start();
 
 if(!isset($_SESSION['checkOutStatus'])){
-    header('Location:http://localhost:8888/Dealers/' . 'cart.php');
+    header('Location:http://localhost:8888/Franzs/' . 'cart.php');
     die();
 }
 
 else{
     if($_SESSION['checkOutStatus'] != "pending" || empty($cart->getCartItems())){
-        header('Location:http://localhost:8888/Dealers/' . 'cart.php');
+        header('Location:http://localhost:8888/Franzs/' . 'cart.php');
         die();
     }
 }
@@ -85,7 +85,7 @@ $user = Sentinel::getUser();
                 <span class="alert email_alert">Invalid input</span>
             </div>
 
-            <div class="form_row">
+            <div class="form_row_multiple_input">
                 <div class="form_input small_input">
                     <label for="form_first_name">First name</label>
                     <input value="<?php printValue($user, 'first_name'); ?>" required class="checkout_input" placeholder="First name" type="text" id="form_first_name" name="form_first_name">
@@ -116,7 +116,7 @@ $user = Sentinel::getUser();
                 <input value="<?php printValue($user, 'province'); ?>" class="checkout_input" placeholder="Province/State" type="text" id="form_province" name="form_province">
             </div>
 
-            <div class="form_row">
+            <div class="form_row_multiple_input">
                 <div class="form_input small_input">
                     <label for="form_country">Country</label>
                     <input value="<?php printValue($user, 'country'); ?>" required class="checkout_input" placeholder="Country" type="text" id="form_country" name="form_country">
@@ -180,7 +180,7 @@ $user = Sentinel::getUser();
                     <span class="alert card_name_alert">Invalid input</span>
                 </div>
 
-                <div class="form_row">
+                <div class="form_row_multiple_input">
                     <div class="form_input small_input">
                         <label for="form_card_expiration">Expiration date</label>
                         <input required class="checkout_input" placeholder="Expiration date (MM/YYYY)" type="text" id="form_card_expiration" name="form_card_expiration">
