@@ -120,14 +120,6 @@
 
     #checkout_form{
 
-        .radio_button_section{
-            @include flex($align: flex-start);
-        }
-
-        .radio_button_wrapper{
-            width: 49.5%;
-        }
-
         width: 55%;
     }
 
