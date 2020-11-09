@@ -11,4 +11,4 @@ File structure
 
 - in root you will find php files for every individual page: index, shop, product-page,....
 - assets - this file contains all javascript and all scss code, icons and product images
-- form-actions
+- form-actions - contains php code that deals with form actions
