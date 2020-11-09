@@ -9,9 +9,11 @@ Packages used
 
 File structure
 
-- in root you will find php files for every individual page: index, shop, product-page,....
+- in root you will find php files for every individual page: index, shop, product-page,.... These files contain html structure and application of php functions that are declared in page-funcs
 - assets - this file contains all javascript and all scss code, icons and product images
 - form-actions - contains php code that deals with form actions
+- page-funcs - php code responsible for functionality of every page, also contains all php classes
+- variables - this file contains general variables used across php code
 - partials - html code for header and footer, header contains more partials in itself, those are:
 
     - search (search bar for product search)
