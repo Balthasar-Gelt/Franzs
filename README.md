@@ -2,6 +2,8 @@
 
 Eshop with antique items built in pure PHP and Javascript.
 
+URL: franzs-eshop.com
+
 Packages used
 - Cartalyst Sentinel - php authorization and authentication
 - RobinHerbots/Inputmask - js input masking library
