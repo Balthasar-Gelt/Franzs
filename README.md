@@ -2,7 +2,7 @@
 
 Eshop with antique items built in pure PHP and Javascript.
 
-<h3>URL: franzs-eshop.com</h3>
+<h3>URL: [franzs-eshop.com](franzs-eshop.com)</h3>
 
 Packages used
 - Cartalyst Sentinel - php authorization and authentication
